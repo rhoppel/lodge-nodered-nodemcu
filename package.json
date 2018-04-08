@@ -1,0 +1,12 @@
+{
+    "name": "NodeMCU-control",
+    "description": "integrate NodeMCU modules with home control",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
