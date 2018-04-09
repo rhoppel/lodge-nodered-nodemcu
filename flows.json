@@ -134,6 +134,102 @@
         "order": 2
     },
     {
+        "id": "fa17f0fb.e881e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ad7c1bc5.974348",
+        "type": "mqtt-broker",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
         "id": "ce69597e.975798",
         "type": "mqtt out",
         "z": "e0c6f6b6.0d5c68",
@@ -431,7 +527,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "[ID]/",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": true,
         "tostatus": false,
@@ -676,7 +772,7 @@
         "wires": [
             [
                 "93f8a9f7.670de8",
-                "26b98fca.50191"
+                "1bee4215.6b942e"
             ]
         ]
     },
@@ -1126,7 +1222,8 @@
             [
                 "cd71d81d.323c18",
                 "9ee08c46.9f26e",
-                "f9bdf6bc.75a208"
+                "f9bdf6bc.75a208",
+                "a81aab1e.101008"
             ]
         ]
     },
@@ -1172,7 +1269,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "p5i",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1261,8 +1358,8 @@
         "name": "Device Configuration",
         "order": 2,
         "width": "6",
-        "height": "10",
-        "format": "<h4>Device Configuration </h4>\n<ol>\n<li>{{msg.payload[0]}} </li>\n<li>D (Device) Object</li>\n<ol>\n<li>dbg:     <span style=\"color:red\"> {{msg.payload[1].dbg}}</span></li>    \n<li>tmpr:    <span style=\"color:red\"> {{msg.payload[1].tmpr}}</span></li>\n<li>s_io:    <span style=\"color:red\"> {{msg.payload[1].s_io}}</span></li>\n<li>mqtt:    <span style=\"color:red\"> {{msg.payload[1].mqtt}}</span></li>\n<li>heap_min:<span style=\"color:red\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>flashid: <span style=\"color:red\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize: <span style=\"color:red\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:red\"> {{msg.payload[1].heap}}  \t\t</span></li>\n<li>pins: \t<span style=\"color:red\"> {{msg.payload[1].pins}}  \t\t</span></li>\n<li>chipid: <span style=\"color:red\"> {{msg.payload[1].chipid}}  \t</span></li>\n<li>ID: \t<span style=\"color:red\"> {{msg.payload[1].ID}}  \t\t</span></li>\n<li>LED: \t<span style=\"color:red\"> {{msg.payload[1].LED}}  \t\t</span></li>\n<li>t_cal:\t<span style=\"color:red\"> {{msg.payload[1].t_cal}} \t\t </span></li>\n<li>name: \t<span style=\"color:red\"> {{msg.payload[1].name}}  \t\t</span></li>\n<li>ap_mac: <span style=\"color:red\"> {{msg.payload[1].ap_mac}} \t\t</span> </li>\n<li>bootreason_extnd: <span style=\"color:red\"> {{msg.payload[1].bootreason_extnd}} </span> </li>\n<li>ip: \t<span style=\"color:red\"> {{msg.payload[1].ip}}  \t\t</span></li>\n<li>sta_mac: <span style=\"color:red\"> {{msg.payload[1].sta_mac}}  \t</span></li>\n<li>type: \t<span style=\"color:red\"> {{msg.payload[1].type}}  \t\t</span></li>\n</ol>\n</ol>\n",
+        "height": "11",
+        "format": "<h4>Device Configuration </h4>\n<ol>\n<li>{{msg.payload[0]}} </li>\n<li>D (Device) Object</li>\n<ol>\n<li>dbg:     <span style=\"color:red\"> {{msg.payload[1].dbg}}</span></li>    \n<li>tmpr:    <span style=\"color:red\"> {{msg.payload[1].tmpr}}</span></li>\n<li>screen:    <span style=\"color:red\"> {{msg.payload[1].screen}}</span></li>\n<li>mqtt:    <span style=\"color:red\"> {{msg.payload[1].mqtt}}</span></li>\n<li>heap_min:<span style=\"color:red\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>flashid: <span style=\"color:red\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize: <span style=\"color:red\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:red\"> {{msg.payload[1].heap}}  \t\t</span></li>\n<li>pins: \t<span style=\"color:red\"> {{msg.payload[1].pins}}  \t\t</span></li>\n<li>chipid: <span style=\"color:red\"> {{msg.payload[1].chipid}}  \t</span></li>\n<li>ID: \t<span style=\"color:red\"> {{msg.payload[1].ID}}  \t\t</span></li>\n<li>LED: \t<span style=\"color:red\"> {{msg.payload[1].LED}}  \t\t</span></li>\n<li>t_cal:\t<span style=\"color:red\"> {{msg.payload[1].t_cal}} \t\t </span></li>\n<li>name: \t<span style=\"color:red\"> {{msg.payload[1].name}}  \t\t</span></li>\n<li>ap_mac: <span style=\"color:red\"> {{msg.payload[1].ap_mac}} \t\t</span> </li>\n<li>bootreason_extnd: <span style=\"color:red\"> {{msg.payload[1].bootreason_extnd}} </span> </li>\n<li>ip: \t<span style=\"color:red\"> {{msg.payload[1].ip}}  \t\t</span></li>\n<li>sta_mac: <span style=\"color:red\"> {{msg.payload[1].sta_mac}}  \t</span></li>\n<li>type: \t<span style=\"color:red\"> {{msg.payload[1].type}}  \t\t</span></li>\n<li>msg: \t<span style=\"color:red\"> {{msg.payload[1].msg}}  \t\t</span></li>\n</ol>\n</ol>\n",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "templateScope": "local",
@@ -1395,7 +1492,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "view msg",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1482,7 +1579,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "Test flow Object 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -1532,7 +1629,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "Test Flow object 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -1745,8 +1842,7 @@
         "y": 280,
         "wires": [
             [
-                "ce69597e.975798",
-                "76da448b.0486fc"
+                "ce69597e.975798"
             ]
         ]
     },
@@ -1769,20 +1865,6 @@
                 "8783d77a.950728"
             ]
         ]
-    },
-    {
-        "id": "76da448b.0486fc",
-        "type": "debug",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 590,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "bf6876f6.0b9138",
@@ -1819,7 +1901,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "[ID]//error",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2118,8 +2200,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": "",
-        "x": 510,
-        "y": 1520,
+        "x": 509,
+        "y": 1493,
         "wires": [
             [
                 "ce69597e.975798"
@@ -2839,6 +2921,102 @@
                 "c852e109.d0cbf",
                 "940cb006.00f3c",
                 "c0aef0c7.62a75"
+            ]
+        ]
+    },
+    {
+        "id": "6c403626.789b38",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Change Name",
+        "topic": "/HL/Dm_078a87/cmd",
+        "payload": "{\"cmd\":\"name\",\"name\":\" ThingEE\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 509,
+        "y": 1529,
+        "wires": [
+            [
+                "ce69597e.975798"
+            ]
+        ]
+    },
+    {
+        "id": "5ba1fc5c.13b9f4",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Send msg",
+        "topic": "/HL/Dm_078a87/cmd",
+        "payload": "{\"cmd\":\"msg\",\"msg\":\"MyFirstMsge\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 520,
+        "y": 1560,
+        "wires": [
+            [
+                "ce69597e.975798"
+            ]
+        ]
+    },
+    {
+        "id": "9dfcc64f.399408",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Clear msg",
+        "topic": "/HL/Dm_078a87/cmd",
+        "payload": "{\"cmd\":\"msg\",\"msg\":\"\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 520,
+        "y": 1600,
+        "wires": [
+            [
+                "ce69597e.975798"
+            ]
+        ]
+    },
+    {
+        "id": "9200f368.ad3e1",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Send msg object",
+        "topic": "/HL/Dm_078a87/cmd",
+        "payload": "{\"cmd\":\"msg\",\"msg\":{\"1\":\"12345678901\",\"2\":\"23456789012\",\"3\":\"34567890123\",\"4\":\"45678901234\",\"5\":\"56789012345\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 500,
+        "y": 1640,
+        "wires": [
+            [
+                "ce69597e.975798"
+            ]
+        ]
+    },
+    {
+        "id": "1bee4215.6b942e",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "func": "for (i = 1; i <= 10; i++ ) {\nif (typeof msg.payload.pins[i.toString()]  == 'undefined') {msg.payload.pins[i.toString()] = \"N/A\";}\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1350,
+        "y": 1120,
+        "wires": [
+            [
+                "26b98fca.50191"
             ]
         ]
     }
