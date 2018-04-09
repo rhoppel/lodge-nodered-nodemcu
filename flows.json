@@ -137,7 +137,7 @@
         "id": "fa17f0fb.e881e",
         "type": "ui_base",
         "theme": {
-            "name": "theme-dark",
+            "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -149,56 +149,57 @@
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
-                "edited": true,
+                "edited": false,
                 "reset": false
             },
             "customTheme": {
-                "name": "Untitled Theme 1",
+                "name": "techdogs",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseColor": "#7aa2f3",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
+                    "default": "#89bbfe",
+                    "value": "#7aa2f3",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#7aa2f3",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#82624b",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
+                    "value": "#9d9d9d",
+                    "edited": true
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
+                    "value": "#676767",
+                    "edited": true
                 },
                 "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#4e4e4e",
+                    "edited": true
                 },
                 "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#7aa2f3",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#4f4f4f",
+                    "edited": true
                 },
                 "base-font": {
                     "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
@@ -228,6 +229,16 @@
         "broker": "127.0.0.1",
         "port": "1883",
         "clientid": ""
+    },
+    {
+        "id": "b5372e87.bef79",
+        "type": "ui_group",
+        "z": "",
+        "name": "Device Messaging",
+        "tab": "5b605797.172848",
+        "disp": true,
+        "width": "5",
+        "collapse": false
     },
     {
         "id": "ce69597e.975798",
@@ -951,8 +962,8 @@
         "min": "-15",
         "max": "15",
         "step": 1,
-        "x": 290,
-        "y": 280,
+        "x": 270,
+        "y": 140,
         "wires": [
             [
                 "10e1ebad.66a734"
@@ -1838,8 +1849,8 @@
         "func": "var t_cal = msg.payload;\nmsg.payload = {\"cmd\":\"t_cal\",\"t_cal\":t_cal}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 430,
-        "y": 280,
+        "x": 410,
+        "y": 140,
         "wires": [
             [
                 "ce69597e.975798"
@@ -1858,8 +1869,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 150,
-        "y": 280,
+        "x": 130,
+        "y": 140,
         "wires": [
             [
                 "8783d77a.950728"
@@ -1947,7 +1958,7 @@
         "payload": "{\"cmd\":\"device\"}",
         "payloadType": "str",
         "topic": "",
-        "x": 560,
+        "x": 500,
         "y": 360,
         "wires": [
             [
@@ -3017,6 +3028,169 @@
         "wires": [
             [
                 "26b98fca.50191"
+            ]
+        ]
+    },
+    {
+        "id": "f4ed4e8a.e7a61",
+        "type": "ui_form",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Message",
+        "label": "Device Message",
+        "group": "b5372e87.bef79",
+        "order": 3,
+        "width": "5",
+        "height": "4",
+        "options": [
+            {
+                "label": "Header",
+                "value": "1",
+                "type": "text",
+                "required": false
+            },
+            {
+                "label": "L1",
+                "value": "2",
+                "type": "text",
+                "required": false
+            },
+            {
+                "label": "L2",
+                "value": "3",
+                "type": "text",
+                "required": false
+            },
+            {
+                "label": "L3",
+                "value": "4",
+                "type": "text",
+                "required": false
+            },
+            {
+                "label": "L4",
+                "value": "5",
+                "type": "text",
+                "required": false
+            }
+        ],
+        "formValue": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "524d2f66.75d54"
+            ]
+        ]
+    },
+    {
+        "id": "524d2f66.75d54",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "func": "var mymsg = msg.payload\nmsg.payload = {\"cmd\":\"msg\",\"msg\":mymsg}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "ce69597e.975798"
+            ]
+        ]
+    },
+    {
+        "id": "485f86d.8ee0f78",
+        "type": "ui_form",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "FriendlyName",
+        "label": "FriendlyName",
+        "group": "b5372e87.bef79",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "options": [
+            {
+                "label": "FriendlyName",
+                "value": "name",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "name": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "73c9c9ee.73c098",
+                "fa5eeb17.fea388"
+            ]
+        ]
+    },
+    {
+        "id": "73c9c9ee.73c098",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "func": "var myname = msg.payload\nmsg.payload = {\"cmd\":\"name\",\"name\":myname.name}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "ce69597e.975798",
+                "fa5eeb17.fea388"
+            ]
+        ]
+    },
+    {
+        "id": "fa5eeb17.fea388",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f0ad2de8.41418",
+        "type": "ui_button",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Clear Message",
+        "group": "b5372e87.bef79",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Clear Message",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"cmd\":\"msg\",\"msg\":\"\"}",
+        "payloadType": "str",
+        "topic": "",
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "ce69597e.975798"
             ]
         ]
     }
