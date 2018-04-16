@@ -1,6 +1,6 @@
 {
     "name": "NodeMCU-control",
-    "description": "integrate NodeMCU modules with home control",
+    "description": "integrate NodeMCU wit Node-Red",
     "version": "0.0.1",
     "dependencies": {},
     "node-red": {
