@@ -363,6 +363,27 @@
         "db": "/home/pi/dbs/iot.db"
     },
     {
+        "id": "3b083196.b37e4e",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "192.168.92.5",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "verifyservercert": false,
+        "compatmode": false,
+        "keepalive": "15",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "1",
+        "willRetain": "false",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": ""
+    },
+    {
         "id": "ce69597e.975798",
         "type": "mqtt out",
         "z": "e0c6f6b6.0d5c68",
@@ -855,7 +876,7 @@
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
         "name": "Blue :LED",
-        "label": "Blue LED",
+        "label": "Blue LED (D4)",
         "group": "6bf64492.b29f0c",
         "order": 9,
         "width": "0",
@@ -884,8 +905,8 @@
         "id": "2f7e62f.197529e",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "p0",
-        "label": "p0",
+        "name": "D0",
+        "label": "D0",
         "group": "6bf64492.b29f0c",
         "order": 10,
         "width": "0",
@@ -980,8 +1001,8 @@
         "id": "122ddd45.68b293",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "p7",
-        "label": "p7",
+        "name": "D7",
+        "label": "D7",
         "group": "6bf64492.b29f0c",
         "order": 11,
         "width": "0",
@@ -1010,8 +1031,8 @@
         "id": "b9394b1a.953098",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "p8",
-        "label": "p8",
+        "name": "D8",
+        "label": "D8",
         "group": "6bf64492.b29f0c",
         "order": 12,
         "width": "0",
@@ -1305,9 +1326,7 @@
         "x": 1393,
         "y": 1260,
         "wires": [
-            [
-                "5d74104.feb73f"
-            ]
+            []
         ]
     },
     {
