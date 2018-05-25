@@ -9,7 +9,7 @@
     {
         "id": "cae895a0.8ab828",
         "type": "tab",
-        "label": "Update System DB",
+        "label": "Update TARDIS DB",
         "disabled": false,
         "info": ""
     },
@@ -21,16 +21,16 @@
         "info": ""
     },
     {
-        "id": "4d987d79.a89374",
-        "type": "tab",
-        "label": "System"
-    },
-    {
         "id": "58ae81fe.fc8ae",
         "type": "tab",
         "label": "Test",
         "disabled": false,
         "info": ""
+    },
+    {
+        "id": "4d987d79.a89374",
+        "type": "tab",
+        "label": "System"
     },
     {
         "id": "32688592.0a19aa",
@@ -47,6 +47,22 @@
         "info": ""
     },
     {
+        "id": "8cd87867.ca9708",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "f1eb4a23.a88e58",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
         "id": "6bf64492.b29f0c",
         "type": "ui_group",
         "z": "",
@@ -61,11 +77,11 @@
         "id": "ae257199.19c84",
         "type": "ui_group",
         "z": "",
-        "name": "Output",
+        "name": "Pin Status",
         "tab": "5b605797.172848",
-        "order": 3,
+        "order": 4,
         "disp": true,
-        "width": "4",
+        "width": "3",
         "collapse": true
     },
     {
@@ -83,29 +99,29 @@
         "id": "9cf22ad5.af9e78",
         "type": "ui_group",
         "z": "",
-        "name": "Node/Pin Config & Status",
+        "name": "Node/Pin States",
         "tab": "5b605797.172848",
-        "order": 5,
+        "order": 6,
         "disp": true,
-        "width": "7",
+        "width": "6",
         "collapse": true
     },
     {
         "id": "45bddcde.4b1494",
         "type": "ui_group",
         "z": "",
-        "name": "Node Configuration & Status",
+        "name": "Node State",
         "tab": "5b605797.172848",
-        "order": 4,
+        "order": 5,
         "disp": true,
-        "width": "7",
+        "width": "6",
         "collapse": true
     },
     {
         "id": "5b605797.172848",
         "type": "ui_tab",
         "z": "",
-        "name": "Nodes",
+        "name": "Main",
         "icon": "dashboard",
         "order": 1
     },
@@ -148,7 +164,7 @@
         "z": "",
         "name": "System",
         "icon": "dashboard",
-        "order": 6
+        "order": 7
     },
     {
         "id": "fa17f0fb.e881e",
@@ -244,20 +260,20 @@
         "id": "b5372e87.bef79",
         "type": "ui_group",
         "z": "",
-        "name": "Device Name",
+        "name": "Select Node",
         "tab": "3a8dcbb7.653aa4",
         "order": 2,
         "disp": true,
-        "width": "4",
+        "width": "6",
         "collapse": false
     },
     {
         "id": "3a8dcbb7.653aa4",
         "type": "ui_tab",
         "z": "",
-        "name": "Messages",
+        "name": "Message",
         "icon": "dashboard",
-        "order": 2
+        "order": 3
     },
     {
         "id": "9adba5f3.d78bb8",
@@ -265,7 +281,7 @@
         "z": "",
         "name": "Miscellaneous",
         "icon": "dashboard",
-        "order": 5
+        "order": 6
     },
     {
         "id": "8f789c15.e1ead",
@@ -273,7 +289,7 @@
         "z": "",
         "name": "Record",
         "icon": "dashboard",
-        "order": 4
+        "order": 5
     },
     {
         "id": "e9b37a71.d109a8",
@@ -303,38 +319,16 @@
         "z": "",
         "name": "Configure",
         "icon": "dashboard",
-        "order": 3
+        "order": 2
     },
     {
         "id": "857ece11.192e7",
         "type": "ui_group",
         "z": "",
-        "name": "Create Pin Configuration",
+        "name": "K9 NodeID Selection",
         "tab": "f095d7f0.6182d8",
         "order": 1,
         "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "41f3f0a9.18b08",
-        "type": "ui_group",
-        "z": "",
-        "name": "pwm [p4] LED",
-        "tab": "5b605797.172848",
-        "order": 6,
-        "disp": true,
-        "width": "7",
-        "collapse": true
-    },
-    {
-        "id": "ff4eeddc.01f8c",
-        "type": "ui_group",
-        "z": "",
-        "name": "Message Screen",
-        "tab": "3a8dcbb7.653aa4",
-        "order": 2,
-        "disp": false,
         "width": "4",
         "collapse": false
     },
@@ -364,6 +358,69 @@
         "birthPayload": ""
     },
     {
+        "id": "409910e3.3cf0d",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Review",
+        "icon": "dashboard",
+        "order": 4
+    },
+    {
+        "id": "da741b7c.fa4ed8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Review Node",
+        "tab": "409910e3.3cf0d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "57b700a8.c08e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node State",
+        "tab": "409910e3.3cf0d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "5fec812e.210f3",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node/Pins State",
+        "tab": "409910e3.3cf0d",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f78522d2.3c171",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pin Control",
+        "tab": "5b605797.172848",
+        "order": 3,
+        "disp": true,
+        "width": "3",
+        "collapse": true
+    },
+    {
+        "id": "689116a6.ccd8d8",
+        "type": "ui_group",
+        "z": "",
+        "name": "active NodeId",
+        "tab": "5b605797.172848",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
         "id": "110362ba.b083ad",
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
@@ -373,8 +430,8 @@
         "console": true,
         "tostatus": false,
         "complete": "payload",
-        "x": 978,
-        "y": 360,
+        "x": 1353,
+        "y": 460,
         "wires": []
     },
     {
@@ -385,8 +442,8 @@
         "topic": "/HL/+/cmd",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 360,
+        "x": 1046,
+        "y": 460,
         "wires": [
             [
                 "5fff5a16.735b14"
@@ -401,27 +458,13 @@
         "topic": "/HL/+/tmpr",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 409,
+        "x": 1046,
+        "y": 509,
         "wires": [
             [
                 "4780d4de.b920dc"
             ]
         ]
-    },
-    {
-        "id": "6412b145.9610a",
-        "type": "debug",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "[ID]/tmpr",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload.tmpr",
-        "x": 976,
-        "y": 410,
-        "wires": []
     },
     {
         "id": "30c0bffc.5bd3e",
@@ -431,8 +474,8 @@
         "topic": "/HL/+/ipins",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 570,
+        "x": 1046,
+        "y": 670,
         "wires": [
             [
                 "3f259d9a.c8b952"
@@ -449,8 +492,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 986,
-        "y": 571,
+        "x": 1405,
+        "y": 690,
         "wires": []
     },
     {
@@ -461,27 +504,13 @@
         "topic": "/HL/+/",
         "qos": "0",
         "broker": "a4bd0da.b2f13f",
-        "x": 686,
-        "y": 309,
+        "x": 1061,
+        "y": 409,
         "wires": [
             [
                 "5a825574.df760c"
             ]
         ]
-    },
-    {
-        "id": "584e397f.2997c8",
-        "type": "debug",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "[ID]/",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1123,
-        "y": 309,
-        "wires": []
     },
     {
         "id": "5eba9624.a43be8",
@@ -491,8 +520,8 @@
         "topic": "/HL/register",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 212,
+        "x": 1046,
+        "y": 312,
         "wires": [
             [
                 "a22ffc04.3a8fc"
@@ -504,13 +533,13 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "HL/register",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1130,
-        "y": 210,
+        "x": 1475,
+        "y": 270,
         "wires": []
     },
     {
@@ -521,41 +550,14 @@
         "topic": "/HL/+/pins",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 510,
+        "x": 1046,
+        "y": 610,
         "wires": [
             [
-                "55a1a6e5.69e4e8"
+                "55a1a6e5.69e4e8",
+                "1ee66b73.7e71c5"
             ]
         ]
-    },
-    {
-        "id": "93f8a9f7.670de8",
-        "type": "debug",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "[ID]/pins",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.pins",
-        "x": 986,
-        "y": 510,
-        "wires": []
-    },
-    {
-        "id": "38fd112e.ed8d2e",
-        "type": "debug",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "[ID]/heap",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.heap",
-        "x": 985,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "8883614a.cae1e",
@@ -565,8 +567,8 @@
         "topic": "/HL/+/heap",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 460,
+        "x": 1046,
+        "y": 560,
         "wires": [
             [
                 "f7337e04.bdec2"
@@ -579,7 +581,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "Debug Toggle",
         "group": "6bf64492.b29f0c",
-        "order": 4,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -588,10 +590,10 @@
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"DEBUG\"}",
-        "payloadType": "str",
+        "payloadType": "json",
         "topic": "",
-        "x": 398,
-        "y": 580,
+        "x": 765,
+        "y": 830,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -606,13 +608,13 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 881,
-        "y": 309,
+        "x": 1256,
+        "y": 409,
         "wires": [
             [
-                "584e397f.2997c8",
                 "386b73c3.aaf41c",
-                "f2eff67f.c44e58"
+                "f2eff67f.c44e58",
+                "29c0742d.f060cc"
             ]
         ]
     },
@@ -622,8 +624,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "pretty": false,
-        "x": 811,
-        "y": 360,
+        "x": 1186,
+        "y": 460,
         "wires": [
             [
                 "110362ba.b083ad"
@@ -634,15 +636,14 @@
         "id": "55a1a6e5.69e4e8",
         "type": "json",
         "z": "e0c6f6b6.0d5c68",
-        "name": "",
+        "name": "pins",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 805.1000518798828,
-        "y": 509.7999029159546,
+        "x": 1180.1000518798828,
+        "y": 609.7999029159546,
         "wires": [
             [
-                "93f8a9f7.670de8",
                 "1bee4215.6b942e",
                 "b7f58d69.ed362"
             ]
@@ -652,17 +653,16 @@
         "id": "4780d4de.b920dc",
         "type": "json",
         "z": "e0c6f6b6.0d5c68",
-        "name": "tmpr json",
+        "name": "tmpr",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 815,
-        "y": 409,
+        "x": 1180,
+        "y": 509,
         "wires": [
             [
-                "6412b145.9610a",
-                "7fa78f9a.a6117",
-                "c87b2075.fa3c6"
+                "c87b2075.fa3c6",
+                "3fafb9ad.589dc6"
             ]
         ]
     },
@@ -670,18 +670,18 @@
         "id": "3f259d9a.c8b952",
         "type": "json",
         "z": "e0c6f6b6.0d5c68",
-        "name": "ipins json",
+        "name": "ipins",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 814,
-        "y": 570,
+        "x": 1179,
+        "y": 670,
         "wires": [
             [
                 "3e07935a.b2c24c",
-                "214d38cf.c23d18",
                 "f64d4470.ea3fe8",
-                "c87b2075.fa3c6"
+                "c87b2075.fa3c6",
+                "214d38cf.c23d18"
             ]
         ]
     },
@@ -689,34 +689,16 @@
         "id": "f7337e04.bdec2",
         "type": "json",
         "z": "e0c6f6b6.0d5c68",
-        "name": "heap json",
+        "name": "heap",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 814,
-        "y": 460,
+        "x": 1179,
+        "y": 560,
         "wires": [
             [
-                "38fd112e.ed8d2e",
-                "a3e1bf99.1868c",
-                "c87b2075.fa3c6"
-            ]
-        ]
-    },
-    {
-        "id": "7fa78f9a.a6117",
-        "type": "function",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "tmpr",
-        "func": "var tmpr = msg.payload.tmpr\nmsg.payload = tmpr \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1151,
-        "y": 393,
-        "wires": [
-            [
-                "d25f9b73.c3e698",
-                "ee0875d8.d48bd8"
+                "c87b2075.fa3c6",
+                "2aee8df5.7cf7c2"
             ]
         ]
     },
@@ -726,9 +708,9 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "group": "ae257199.19c84",
-        "order": 3,
-        "width": 0,
-        "height": 0,
+        "order": 9,
+        "width": "3",
+        "height": "3",
         "gtype": "gage",
         "title": "Temperature",
         "label": "units",
@@ -742,26 +724,9 @@
         ],
         "seg1": "65",
         "seg2": "72",
-        "x": 1411,
-        "y": 353,
+        "x": 1785,
+        "y": 470,
         "wires": []
-    },
-    {
-        "id": "a3e1bf99.1868c",
-        "type": "function",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "heap",
-        "func": "var heap = msg.payload.heap\nmsg.payload = heap\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1151,
-        "y": 433,
-        "wires": [
-            [
-                "67adc343.0da6fc",
-                "90cba916.f5af68"
-            ]
-        ]
     },
     {
         "id": "67adc343.0da6fc",
@@ -769,9 +734,9 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "group": "ae257199.19c84",
-        "order": 4,
-        "width": 0,
-        "height": 0,
+        "order": 12,
+        "width": "3",
+        "height": "3",
         "gtype": "gage",
         "title": "Heap Memory",
         "label": "units",
@@ -785,8 +750,8 @@
         ],
         "seg1": "6500",
         "seg2": "12500",
-        "x": 1421,
-        "y": 393,
+        "x": 2005,
+        "y": 530,
         "wires": []
     },
     {
@@ -795,7 +760,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "reset",
         "group": "6bf64492.b29f0c",
-        "order": 7,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -806,12 +771,12 @@
         "payload": "{\"cmd\":\"reset\"}",
         "payloadType": "str",
         "topic": "",
-        "x": 110,
-        "y": 150,
+        "x": 280,
+        "y": 260,
         "wires": [
             [
-                "a81aab1e.101008",
-                "b9b3f548.4fa638"
+                "b9b3f548.4fa638",
+                "e311861f.9a3638"
             ]
         ]
     },
@@ -821,8 +786,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "t_cal",
         "label": "",
-        "group": "6bf64492.b29f0c",
-        "order": 9,
+        "group": "ae257199.19c84",
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -830,8 +795,8 @@
         "min": "-5",
         "max": "5",
         "step": 1,
-        "x": 260,
-        "y": 110,
+        "x": 635,
+        "y": 210,
         "wires": [
             [
                 "10e1ebad.66a734",
@@ -843,13 +808,13 @@
         "id": "73f2ffba.d1f35",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "Blue :LED",
-        "label": "Blue LED (D4)",
-        "group": "6bf64492.b29f0c",
-        "order": 10,
+        "name": "D4",
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 7,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -861,11 +826,12 @@
         "offvalueType": "json",
         "officon": "check_box",
         "offcolor": "#2d20db",
-        "x": 416,
-        "y": 414,
+        "x": 795,
+        "y": 470,
         "wires": [
             [
-                "b9b3f548.4fa638"
+                "b9b3f548.4fa638",
+                "e98d6dbe.f8f36"
             ]
         ]
     },
@@ -874,12 +840,12 @@
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
         "name": "D0",
-        "label": "D0",
-        "group": "6bf64492.b29f0c",
-        "order": 11,
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 1,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -891,11 +857,12 @@
         "offvalueType": "json",
         "officon": "fa-square-o ",
         "offcolor": "#f44256",
-        "x": 426.00008392333984,
-        "y": 273.00016593933105,
+        "x": 801.0000839233398,
+        "y": 373.00016593933105,
         "wires": [
             [
-                "b9b3f548.4fa638"
+                "b9b3f548.4fa638",
+                "e98d6dbe.f8f36"
             ]
         ]
     },
@@ -905,7 +872,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "IO Screen Toggle",
         "group": "6bf64492.b29f0c",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -914,10 +881,10 @@
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"scrn_io\"}",
-        "payloadType": "str",
+        "payloadType": "json",
         "topic": "/HL/Dm_078a87/cmd",
-        "x": 388,
-        "y": 540,
+        "x": 755,
+        "y": 800,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -928,7 +895,7 @@
         "id": "de5d2a13.8c1de8",
         "type": "inject",
         "z": "e0c6f6b6.0d5c68",
-        "name": "",
+        "name": "boot",
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
@@ -936,31 +903,11 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "x": 138,
-        "y": 420,
+        "x": 270,
+        "y": 170,
         "wires": [
             [
-                "a81aab1e.101008"
-            ]
-        ]
-    },
-    {
-        "id": "a81aab1e.101008",
-        "type": "function",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "Reset",
-        "func": "msg.reset = true\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 218,
-        "y": 340,
-        "wires": [
-            [
-                "73f2ffba.d1f35",
-                "2f7e62f.197529e",
-                "122ddd45.68b293",
-                "b9394b1a.953098",
-                "5a46baa7.256964"
+                "e311861f.9a3638"
             ]
         ]
     },
@@ -969,12 +916,12 @@
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
         "name": "D7",
-        "label": "D7",
-        "group": "6bf64492.b29f0c",
-        "order": 12,
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 5,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -986,11 +933,12 @@
         "offvalueType": "json",
         "officon": "fa-square-o ",
         "offcolor": "#f44256 ",
-        "x": 427,
-        "y": 319,
+        "x": 791,
+        "y": 630,
         "wires": [
             [
-                "b9b3f548.4fa638"
+                "b9b3f548.4fa638",
+                "e98d6dbe.f8f36"
             ]
         ]
     },
@@ -999,12 +947,12 @@
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
         "name": "D8",
-        "label": "D8",
-        "group": "6bf64492.b29f0c",
-        "order": 13,
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 6,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -1016,11 +964,12 @@
         "offvalueType": "json",
         "officon": "fa-square-o ",
         "offcolor": "#f44256",
-        "x": 423,
-        "y": 366,
+        "x": 790,
+        "y": 680,
         "wires": [
             [
-                "b9b3f548.4fa638"
+                "b9b3f548.4fa638",
+                "e98d6dbe.f8f36"
             ]
         ]
     },
@@ -1032,8 +981,8 @@
         "links": [
             "9730944a.c93858"
         ],
-        "x": 263,
-        "y": 420,
+        "x": 585,
+        "y": 170,
         "wires": []
     },
     {
@@ -1044,8 +993,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 865,
-        "y": 213,
+        "x": 1240,
+        "y": 313,
         "wires": [
             [
                 "cd71d81d.323c18",
@@ -1058,27 +1007,41 @@
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
         "name": "Split D ipins",
-        "func": "var msg1 = { payload:msg.payload.ipins[\"3\"] };\nvar msg2 = { payload:msg.payload.ipins[\"5\"] };\nvar msg3 = { payload:msg.payload.ipins[\"6\"] };\n\nreturn [msg1, msg2, msg3 ];\n",
-        "outputs": 3,
+        "func": "var mynode   = msg.topic.split(\"/\") || \"error\";\nmynode = mynode[2]\n\ntopic = null;\n\nnode.status({text:\"node | \" + mynode});\n\nvar msg0 = { payload:msg.payload.ipins[\"0\"] };\nvar msg3 = { payload:msg.payload.ipins[\"3\"] };\nvar msg5 = { payload:msg.payload.ipins[\"5\"] };\nvar msg6 = { payload:msg.payload.ipins[\"6\"] };\nvar msg7 = { payload:msg.payload.ipins[\"7\"] };\nvar msg8 = { payload:msg.payload.ipins[\"8\"] };\n\nreturn [msg0, msg3, msg5, msg6, msg7, msg8];\n",
+        "outputs": 6,
         "noerr": 0,
-        "x": 711,
-        "y": 680,
+        "x": 1390,
+        "y": 1010,
         "wires": [
             [
-                "729e7ea5.64ed7"
+                "852ce96f.22d158"
+            ],
+            [
+                "729e7ea5.64ed7",
+                "ee510517.a50df8"
             ],
             [
                 "1fb46fa0.eb6c7",
-                "b59ea8f8.8d27b8"
+                "188159ac.e1b356"
             ],
             [
-                "d6a5ce23.3bef8"
+                "d6a5ce23.3bef8",
+                "2b09a59.bf5355a"
+            ],
+            [
+                "e6c5630a.b48e6"
+            ],
+            [
+                "f327e4a8.97d5c8"
             ]
         ],
         "outputLabels": [
+            "0",
             "3",
             "5",
-            "6"
+            "6",
+            "7",
+            "8"
         ]
     },
     {
@@ -1091,8 +1054,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 911,
-        "y": 667,
+        "x": 1640,
+        "y": 880,
         "wires": []
     },
     {
@@ -1105,8 +1068,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 911,
-        "y": 707,
+        "x": 1640,
+        "y": 910,
         "wires": []
     },
     {
@@ -1119,25 +1082,25 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 911,
-        "y": 747,
+        "x": 1640,
+        "y": 940,
         "wires": []
     },
     {
         "id": "f64d4470.ea3fe8",
         "type": "ui_template",
         "z": "e0c6f6b6.0d5c68",
-        "group": "ae257199.19c84",
+        "group": "e87b0972.cfcab8",
         "name": "IPINS",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"center\">\n<p><b><u>Input Pins & states</u></b></p>\n</div>\n<div layout=\"row\" layout-align=\"center\">\n<p>3 5 6</p>\n</div>\n<div layout=\"row\" layout-align=\"center\">\n<p> \n{{msg.payload.ipins[\"3\"]}} \n{{msg.payload.ipins[\"5\"]}} \n{{msg.payload.ipins[\"6\"]}}  \n</p>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1391,
-        "y": 573,
+        "x": 1766,
+        "y": 673,
         "wires": [
             []
         ]
@@ -1149,14 +1112,14 @@
         "group": "9cf22ad5.af9e78",
         "name": "Pin Config & Status",
         "order": 2,
-        "width": "7",
-        "height": "11",
-        "format": "<h3>Pin States</h3>\n<ol start = 0>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"0\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"1\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"2\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"3\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"4\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"5\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"6\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"7\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"8\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"9\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"10\"]}}</span></li>\n</ol>\n<h3>Pin States Legend</h3>\n<a style=\"color:LightBlue;\"  target=\"_blank\" href=\"https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode\">gpio docs</a>\n<h4>m (modes)</h4>\n<ol start = 0>\n<li>gpio.INPUT</li> \n<li>gpio.OUTPUT</li> \n<li>gpio.INT</li>\n<li>gpio.OPENDRAIN</li>  \n</ol>\n<h4>r (read state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>w (write state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>pu (pullup)</h4>\n<ol start = 0>\n<li>FLOAT  true</li>\n<li>PULLUP false</li>\n</ol>\n<p>pullup gpio.PULLUP enables the weak pull-up resistor; </p>\n<p>default is gpio.FLOAT</p>\n<h4>t  (trigger type)</h4>\n<ul>\n<li>\"up\"</li> \n<li>\"down\"</li> \n<li>\"both\"</li> \n<li>\"low\"</li> \n<li>\"high\"</li>\n</ul>\n<h4>pwm  (pulse width modulation)</h4>\n<ul>\n<li>ON: \"true\"</li> \n<li>OFF: \"false\"</li> \n</ul>\n<h4>freq (frequency for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>pwm frequency (0 - 1000 Hz)</li> \n</ul>\n<h4>duty (duty cycle for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>duty cycle (0-1024)</li> \n</ul>\n",
+        "width": "6",
+        "height": "6",
+        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.id}}</span> </p>\n<ol start = 0>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"0\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"1\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"2\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"3\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"4\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"5\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"6\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"7\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"8\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"9\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"10\"]}}</span></li>\n</ol>\n<h3>Pin States Legend</h3>\n<a style=\"color:LightBlue;\"  target=\"_blank\" href=\"https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode\">gpio docs</a>\n<h4>m (modes)</h4>\n<ol start = 0>\n<li>gpio.INPUT</li> \n<li>gpio.OUTPUT</li> \n<li>gpio.INT</li>\n<li>gpio.OPENDRAIN</li>  \n</ol>\n<h4>r (read state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>w (write state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>pu (pullup)</h4>\n<ol start = 0>\n<li>FLOAT  true</li>\n<li>PULLUP false</li>\n</ol>\n<p>pullup gpio.PULLUP enables the weak pull-up resistor; </p>\n<p>default is gpio.FLOAT</p>\n<h4>t  (trigger type)</h4>\n<ul>\n<li>\"up\"</li> \n<li>\"down\"</li> \n<li>\"both\"</li> \n<li>\"low\"</li> \n<li>\"high\"</li>\n</ul>\n<h4>pwm  (pulse width modulation)</h4>\n<ul>\n<li>ON: \"true\"</li> \n<li>OFF: \"false\"</li> \n</ul>\n<h4>freq (frequency for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>pwm frequency (0 - 1000 Hz)</li> \n</ul>\n<h4>duty (duty cycle for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>duty cycle (0-1024)</li> \n</ul>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1431,
-        "y": 533,
+        "x": 1805,
+        "y": 610,
         "wires": [
             []
         ]
@@ -1169,15 +1132,15 @@
         "links": [
             "5a46baa7.256964"
         ],
-        "x": 1215,
-        "y": 630,
+        "x": 1490,
+        "y": 470,
         "wires": [
             [
                 "f64d4470.ea3fe8",
                 "26b98fca.50191",
-                "386b73c3.aaf41c",
                 "67adc343.0da6fc",
-                "d25f9b73.c3e698"
+                "d25f9b73.c3e698",
+                "ade6b40d.463f78"
             ]
         ]
     },
@@ -1188,14 +1151,14 @@
         "group": "45bddcde.4b1494",
         "name": "Node Configuration",
         "order": 2,
-        "width": "7",
+        "width": "6",
         "height": "10",
-        "format": "<h3>Device Configuration </h3>\n<p>[ID]<span style=\"color:LightBlue\"> {{msg.payload[0]}}</span> </p>\n<p>D (Device) Object</p>\n<ol>\n<li>dbg:     <span style=\"color:LightBlue\"> {{msg.payload[1].dbg}}</span></li>    \n<li>tmpr:    <span style=\"color:LightBlue\"> {{msg.payload[1].tmpr}}</span></li>\n<li>screen:  <span style=\"color:LightBlue\"> {{msg.payload[1].screen}}</span></li>\n<li>mqtt:    <span style=\"color:LightBlue\"> {{msg.payload[1].mqtt}}</span></li>\n<li>heap_min:<span style=\"color:LightBlue\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>flashid: <span style=\"color:LightBlue\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize:<span style=\"colorLightBluea\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:LightBlue\"> {{msg.payload[1].heap}}</span></li>\n<li>pins: \t <span style=\"color:LightBlue\"> {{msg.payload[1].pins}}</span></li>\n<li>chipid:  <span style=\"color:LightBlue\"> {{msg.payload[1].chipid}}</span></li>\n<li>ID: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ID}}</span></li>\n<li>LED: \t <span style=\"color:LightBlue\"> {{msg.payload[1].LED}}</span></li>\n<li>t_cal:\t <span style=\"color:LightBlue\"> {{msg.payload[1].t_cal}}</span></li>\n<li>name: \t <span style=\"color:LightBlue\"> {{msg.payload[1].name}}</span></li>\n<li>ap_mac:  <span style=\"color:LightBlue\"> {{msg.payload[1].ap_mac}}</span> </li>\n<li>bootreason_extnd: <span style=\"color:LightBlue\"> {{msg.payload[1].bootreason_extnd}}</span> </li>\n<li>ip: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ip}}</span></li>\n<li>sta_mac: <span style=\"color:LightBlue\"> {{msg.payload[1].sta_mac}}</span></li>\n<li>type: \t <span style=\"color:LightBlue\"> {{msg.payload[1].type}}</span></li>\n<li>msg: \t <span style=\"color:LightBlue\"> {{msg.payload[1].msg}}</span></li>\n</ol>\n",
+        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.payload[0]}}</span> </p>\n<p>D (Device) Object</p>\n<ol>\n<li>adc:     <span style=\"color:LightBlue\"> {{msg.payload[1].adc}}</span></li>\n<li>ap_mac:  <span style=\"color:LightBlue\"> {{msg.payload[1].ap_mac}}</span> </li>\n<li>bootreason_extnd: <span style=\"color:LightBlue\"> {{msg.payload[1].bootreason_extnd}}</span> </li>\n<li>chipid:  <span style=\"color:LightBlue\"> {{msg.payload[1].chipid}}</span></li>\n<li>dbg:     <span style=\"color:LightBlue\"> {{msg.payload[1].dbg}}</span></li>    \n<li>flashid: <span style=\"color:LightBlue\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize:<span style=\"colorLightBlue\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:LightBlue\"> {{msg.payload[1].heap}}</span></li>\n<li>heap_min:<span style=\"color:LightBlue\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>ID: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ID}}</span></li>\n<li>ip: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ip}}</span></li>\n<li>LED: \t <span style=\"color:LightBlue\"> {{msg.payload[1].LED}}</span></li>\n<li>pins: \t <span style=\"color:LightBlue\"> {{msg.payload[1].pins}}</span></li>\n<li>mqtt:    <span style=\"color:LightBlue\"> {{msg.payload[1].mqtt}}</span></li>\n<li>msg: \t <span style=\"color:LightBlue\"> {{msg.payload[1].msg}}</span></li>\n<li>name: \t <span style=\"color:LightBlue\"> {{msg.payload[1].name}}</span></li>\n<li>screen:  <span style=\"color:LightBlue\"> {{msg.payload[1].screen}}</span></li>\n<li>sta_mac: <span style=\"color:LightBlue\"> {{msg.payload[1].sta_mac}}</span></li>\n<li>t_cal:\t <span style=\"color:LightBlue\"> {{msg.payload[1].t_cal}}</span></li>\n<li>tmpr:    <span style=\"color:LightBlue\"> {{msg.payload[1].tmpr}}</span></li>\n<li>type: \t <span style=\"color:LightBlue\"> {{msg.payload[1].type}}</span></li>\n</ol>\n",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "templateScope": "local",
-        "x": 1426,
-        "y": 310,
+        "x": 1805,
+        "y": 410,
         "wires": [
             []
         ]
@@ -1206,7 +1169,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "pins CMD",
         "group": "6bf64492.b29f0c",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1215,10 +1178,10 @@
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"pins\"}",
-        "payloadType": "str",
+        "payloadType": "json",
         "topic": "",
-        "x": 415,
-        "y": 462,
+        "x": 782,
+        "y": 742,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -1229,10 +1192,10 @@
         "id": "55a3d82f.259e88",
         "type": "comment",
         "z": "e0c6f6b6.0d5c68",
-        "name": "Remote Espy-Node Reset & Re-Initialze State",
+        "name": "Remote K9-Node Reset & Re-Initialze State",
         "info": "",
-        "x": 178,
-        "y": 280,
+        "x": 380,
+        "y": 120,
         "wires": []
     },
     {
@@ -1240,9 +1203,9 @@
         "type": "comment",
         "z": "e0c6f6b6.0d5c68",
         "name": "To-Do & Status & Info",
-        "info": "# _Node-Red_\n## Context\n- need to Change context for registering devices\n- ~~add Espy-Node Name to Dashboard entries~~\n\n## Configurations & states\n- ~~clean up help in menu~~\n- add PWM & FREQ control for blue LED using slider\n\n# _espy-node_\n- ~~create error node messages~~\n- re-write inputs to process using INT rather than polling\n\n## requested changes\n- ~~send ipins status upon initialization~~\n- ~~send pin intialization command~~\n\n## Commands\n- ~~tcal~~\n- ~~remove heap command (can use device command instead)~~\n\n## Testing\n- ~~pin configuration commands~~\n- ~~create testing subflows for inject nodes~~\n- \n# Github\n- make sure remote storage on GitHub is working\n\n[System information Flow](https://flows.nodered.org/flow/9b9f68f6641a42452e848a37da5df972)\n\n[HTML Cheatsheet](http://www.simplehtmlguide.com/cheatsheet.php)\n\n[NodeMCU GPIO](https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode)",
-        "x": 980,
-        "y": 810,
+        "info": "# _Node-Red_\n## Bugs\n- k9 count in UI is broken\n\n## Context\n- need to Change context for registering devices\n- ~~add Espy-Node Name to Dashboard entries~~\n\n## Configurations & states\n- ~~clean up help in menu~~\n- add PWM & FREQ control for blue LED using slider\n\n# _espy-node_\n- ~~create error node messages~~\n- re-write inputs to process using INT rather than polling\n\n## requested changes\n- ~~send ipins status upon initialization~~\n- ~~send pin intialization command~~\n\n## Commands\n- ~~tcal~~\n- ~~remove heap command (can use device command instead)~~\n\n## Testing\n- ~~pin configuration commands~~\n- ~~create testing subflows for inject nodes~~\n- \n# Github\n- make sure remote storage on GitHub is working\n\n[System information Flow](https://flows.nodered.org/flow/9b9f68f6641a42452e848a37da5df972)\n\n[HTML Cheatsheet](http://www.simplehtmlguide.com/cheatsheet.php)\n\n[NodeMCU GPIO](https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode)",
+        "x": 1160,
+        "y": 130,
         "wires": []
     },
     {
@@ -1251,18 +1214,18 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "created to perform individual actions based on a single pin change",
         "info": "",
-        "x": 876,
-        "y": 630,
+        "x": 1620,
+        "y": 1200,
         "wires": []
     },
     {
         "id": "ea3b98be.a1d368",
         "type": "comment",
         "z": "e0c6f6b6.0d5c68",
-        "name": "status & control for 1 espy-node",
+        "name": "status & control for 1 k9 node",
         "info": "",
-        "x": 1411,
-        "y": 260,
+        "x": 1835,
+        "y": 370,
         "wires": []
     },
     {
@@ -1271,8 +1234,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "Commands Topic Injection",
         "info": "",
-        "x": 200,
-        "y": 60,
+        "x": 770,
+        "y": 130,
         "wires": []
     },
     {
@@ -1283,8 +1246,8 @@
         "group": "ae257199.19c84",
         "voice": "en-GB",
         "always": "",
-        "x": 1281,
-        "y": 720,
+        "x": 1890,
+        "y": 860,
         "wires": []
     },
     {
@@ -1295,8 +1258,8 @@
         "func": "if (msg.payload === 1)\nmsg.payload = \"pin 5 went high\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1101,
-        "y": 720,
+        "x": 1650,
+        "y": 850,
         "wires": [
             []
         ]
@@ -1309,8 +1272,8 @@
         "func": "var t_cal = msg.payload;\nmsg.payload = {\"cmd\":\"t_cal\",\"t_cal\":t_cal}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 420,
-        "y": 110,
+        "x": 795,
+        "y": 210,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -1325,8 +1288,8 @@
         "topic": "/HL/+/error",
         "qos": "2",
         "broker": "a4bd0da.b2f13f",
-        "x": 671,
-        "y": 260,
+        "x": 1046,
+        "y": 360,
         "wires": [
             [
                 "ba972b1e.2d9238"
@@ -1339,8 +1302,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "pretty": false,
-        "x": 811,
-        "y": 260,
+        "x": 1186,
+        "y": 360,
         "wires": [
             [
                 "30e51e95.cdb8d2"
@@ -1357,8 +1320,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 984,
-        "y": 260,
+        "x": 1325,
+        "y": 360,
         "wires": []
     },
     {
@@ -1367,7 +1330,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "Device Status",
         "group": "6bf64492.b29f0c",
-        "order": 5,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1376,10 +1339,10 @@
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"device\"}",
-        "payloadType": "str",
+        "payloadType": "json",
         "topic": "",
-        "x": 400,
-        "y": 630,
+        "x": 765,
+        "y": 860,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -1392,8 +1355,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "MQTT Interface",
         "info": "",
-        "x": 670,
-        "y": 60,
+        "x": 1065,
+        "y": 180,
         "wires": []
     },
     {
@@ -1431,8 +1394,8 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
-        "x": 1411,
-        "y": 433,
+        "x": 1785,
+        "y": 510,
         "wires": [
             [],
             []
@@ -1473,8 +1436,8 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
-        "x": 1422,
-        "y": 474,
+        "x": 1795,
+        "y": 560,
         "wires": [
             [],
             []
@@ -2200,15 +2163,16 @@
         "id": "1bee4215.6b942e",
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "func": "for (i = 1; i <= 10; i++ ) {\nif (typeof msg.payload.pins[i.toString()]  == 'undefined') {msg.payload.pins[i.toString()] = \"N/A\";}\n}\nreturn msg;",
+        "name": "load pin data",
+        "func": "var mynode   = msg.topic.split(\"/\") || \"error\";\nmynode = mynode[2]\n\nnode.status({text:\"node | \" + mynode});\n\nfor (i = 1; i <= 10; i++ ) {\nif (typeof msg.payload.pins[i.toString()]  == 'undefined') {\n        msg.payload.pins[i.toString()] = \"N/A\";\n    }\n}\n\nmsg.id = mynode\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1149,
-        "y": 493,
+        "x": 1455,
+        "y": 610,
         "wires": [
             [
-                "26b98fca.50191"
+                "26b98fca.50191",
+                "1eb631d4.2ebcbe"
             ]
         ]
     },
@@ -2216,10 +2180,10 @@
         "id": "f4ed4e8a.e7a61",
         "type": "ui_form",
         "z": "e0c6f6b6.0d5c68",
-        "name": "Message Screen",
-        "label": "Message Screen on device",
-        "group": "ff4eeddc.01f8c",
-        "order": 3,
+        "name": "Message to Node Screen",
+        "label": "Message to Node Screen",
+        "group": "b5372e87.bef79",
+        "order": 6,
         "width": "0",
         "height": "0",
         "options": [
@@ -2263,8 +2227,8 @@
         },
         "payload": "",
         "topic": "",
-        "x": 276,
-        "y": 229,
+        "x": 625,
+        "y": 330,
         "wires": [
             [
                 "524d2f66.75d54"
@@ -2279,8 +2243,8 @@
         "func": "var mymsg = msg.payload\nmsg.payload = {\"cmd\":\"msg\",\"msg\":mymsg}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 426,
-        "y": 229,
+        "x": 801,
+        "y": 329,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -2291,10 +2255,10 @@
         "id": "485f86d.8ee0f78",
         "type": "ui_form",
         "z": "e0c6f6b6.0d5c68",
-        "name": "FriendlyName",
-        "label": "Device Name",
+        "name": "rename Node",
+        "label": "rename Node",
         "group": "b5372e87.bef79",
-        "order": 3,
+        "order": 4,
         "width": "0",
         "height": "0",
         "options": [
@@ -2310,8 +2274,8 @@
         },
         "payload": "",
         "topic": "",
-        "x": 266,
-        "y": 189,
+        "x": 641,
+        "y": 289,
         "wires": [
             [
                 "73c9c9ee.73c098"
@@ -2326,8 +2290,8 @@
         "func": "var myname = msg.payload\nmsg.payload = {\"cmd\":\"name\",\"name\":myname.name}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 426,
-        "y": 189,
+        "x": 801,
+        "y": 289,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -2339,8 +2303,8 @@
         "type": "ui_button",
         "z": "e0c6f6b6.0d5c68",
         "name": "Clear Message",
-        "group": "ff4eeddc.01f8c",
-        "order": 1,
+        "group": "b5372e87.bef79",
+        "order": 5,
         "width": "0",
         "height": "0",
         "passthru": false,
@@ -2349,10 +2313,10 @@
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"msg\",\"msg\":\"\"}",
-        "payloadType": "str",
+        "payloadType": "json",
         "topic": "",
-        "x": 398,
-        "y": 500,
+        "x": 765,
+        "y": 770,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -2365,33 +2329,11 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "REGISTER",
         "links": [
-            "2e2c0253.a3741e",
-            "3450a6f7.209e5a",
-            "8e35a994.f4baa8",
-            "7fad08d5.65ecd8"
+            "2e2c0253.a3741e"
         ],
-        "x": 1055,
-        "y": 150,
+        "x": 1420,
+        "y": 313,
         "wires": []
-    },
-    {
-        "id": "3494a47c.ffd36c",
-        "type": "ui_template",
-        "z": "cae895a0.8ab828",
-        "group": "45bddcde.4b1494",
-        "name": "Instance Full Info",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.name}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1170,
-        "y": 140,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "984adf6f.84cac",
@@ -2401,8 +2343,8 @@
         "func": "msg.reset = true\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 360,
-        "y": 130,
+        "x": 600,
+        "y": 190,
         "wires": [
             [
                 "70541816.25e608",
@@ -2420,10 +2362,10 @@
         "payloadType": "str",
         "repeat": "",
         "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "x": 210,
-        "y": 130,
+        "once": false,
+        "onceDelay": "0.2",
+        "x": 430,
+        "y": 190,
         "wires": [
             [
                 "984adf6f.84cac"
@@ -2435,19 +2377,19 @@
         "type": "function",
         "z": "cae895a0.8ab828",
         "name": "update global k9-nodes Object",
-        "func": "\nvar local    = global.get('k9-nodes') || {};\nvar myname   = msg.payload[0] || \"error\";\nvar myobject = msg.payload[1] || {\"error\":\"not found\"};\n\nif (msg.reset === true) local = {}\n    else {\n        if (typeof local[myname] === \"undefined\" ) local[myname] = {};\n        for (var y in myobject)\n                local[myname][y] = myobject[y]; \n    }\nglobal.set('k9-nodes',local)\n    \n// count number of K9 nodes\nvar count = 0;\nvar list = [];\nvar list_id = \"\";\nfor (list_id in local) {\n    ++count;\n    list.push(list_id);\n}\n    \nglobal.set('k9-nodes-count',count);\n\nsColor = \"red\";\nsFill = 'ring'\nif (count > 0) {\n    sColor = \"green\";sFill = 'dot';\n    }\nnode.status({shape:sFill,fill:sColor,text:\"K9-nodes\" + \" | \" + count});\n\nmsg.payload = {};\nmsg.options = list;\nmsg.count   = count;\nif (typeof name === \"string\") msg.name    = local[myname].name;\nif (typeof id === \"string\") msg.id      = local[myname].id;\n\nreturn msg;",
+        "func": "\nvar local    = global.get('k9-nodes') || {};\nvar myname   = msg.payload[0] || \"error\";\nvar myobject = msg.payload[1] || {\"error\":\"not found\"};\n\nif (msg.reset === true) local = {}\n    else {\n        if (typeof local[myname] === \"undefined\" ) local[myname] = {};\n        for (var y in myobject)\n                local[myname][y] = myobject[y]; \n    }\nglobal.set('k9-nodes',local)\n    \n// count number of K9 nodes\nvar count = 0;\nvar list = [];\nvar list_id = \"\";\nvar list_name = \"\";\nvar option = {};\nfor (list_id in local) {\n    ++count;\n    option = {}\n    if (typeof  local[list_id] === 'undefined') list_name = \"blank\";\n    else list_name = local[list_id].name || \"blank\";\n    option[list_name] = list_id;\n    list.push(option);\n}\n    \nglobal.set('k9-nodes-count',count);\nglobal.set('nodeList',list);\n\nsColor = \"red\";\nsFill = 'ring';\nif (count > 0) {\n    sColor = \"green\";sFill = 'dot';\n    }\nnode.status({shape:sFill,fill:sColor,text:\"K9-nodes\" + \" | \" + count});\nmsg.count   = count;\n\n\nmsg.payload = global.get('activeNodeId') || null;\n//msg.payload = \"D1m_d0fbc3\";\nmsg.options = list;\n\nif (typeof name === \"string\") msg.name    = local[myname].name;\nif (typeof id === \"string\") msg.id      = local[myname].id;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 870,
-        "y": 210,
+        "y": 240,
         "wires": [
             [
                 "3d685019.2cb53",
-                "3494a47c.ffd36c",
-                "d4e58902.fe58b8",
-                "2b4b6c52.8c0aa4",
-                "3e10bf56.b8b77",
-                "67317113.3c897"
+                "67317113.3c897",
+                "dae7a56b.f6fd28",
+                "2c61747a.1a3c0c",
+                "73e6e690.5f0418",
+                "d4e58902.fe58b8"
             ]
         ]
     },
@@ -2456,94 +2398,37 @@
         "type": "debug",
         "z": "cae895a0.8ab828",
         "name": "Test flow Object 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
         "complete": "true",
-        "x": 1170,
-        "y": 100,
+        "x": 1200,
+        "y": 160,
         "wires": []
-    },
-    {
-        "id": "bbd6723a.c0c8d",
-        "type": "inject",
-        "z": "cae895a0.8ab828",
-        "name": "inject TEST 2 fullJSON object",
-        "topic": "",
-        "payload": "[\"Dm_078a86\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"Dm_078a87\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\" TEST 2\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 280,
-        "y": 340,
-        "wires": [
-            [
-                "70541816.25e608",
-                "26cb6cde.3770f4"
-            ]
-        ]
-    },
-    {
-        "id": "d4e58902.fe58b8",
-        "type": "ui_template",
-        "z": "cae895a0.8ab828",
-        "group": "ae257199.19c84",
-        "name": "# K9-nodes",
-        "order": 8,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <h4 align = center># K9-nodes = {{msg.count}}</h4>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1150,
-        "y": 180,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "1b0a55fc.3e719a",
         "type": "comment",
         "z": "cae895a0.8ab828",
-        "name": "Global [context]",
+        "name": "K9-node [global]",
         "info": "",
         "x": 850,
-        "y": 120,
+        "y": 200,
         "wires": []
-    },
-    {
-        "id": "2b4b6c52.8c0aa4",
-        "type": "ui_template",
-        "z": "cae895a0.8ab828",
-        "group": "ae257199.19c84",
-        "name": "Instance Name 2",
-        "order": 7,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.name}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1170,
-        "y": 220,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2e2c0253.a3741e",
         "type": "link in",
         "z": "cae895a0.8ab828",
-        "name": "register",
+        "name": "Register Node State",
         "links": [
-            "a5cbdf95.32add"
+            "4ba377b9.595dd8",
+            "a5cbdf95.32add",
+            "f2eff67f.c44e58"
         ],
-        "x": 565,
-        "y": 90,
+        "x": 615,
+        "y": 240,
         "wires": [
             [
                 "70541816.25e608"
@@ -2557,10 +2442,13 @@
         "name": "Send \"cmd\" topic",
         "links": [
             "36aab9f5.b6fd06",
-            "48c18a00.134cf8"
+            "48c18a00.134cf8",
+            "77b89909.4c1b68",
+            "360676e2.1fbe2a",
+            "69b4786b.2e89a8"
         ],
-        "x": 515,
-        "y": 690,
+        "x": 910,
+        "y": 120,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -2611,12 +2499,13 @@
         "type": "inject",
         "z": "58ae81fe.fc8ae",
         "name": "p4 \"1\"",
-        "topic": "/HL/Dm_078a87/cmd",
+        "topic": "",
         "payload": "{\"cmd\":\"pins_write\",\"pins\":{\"4\":1}}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
         "once": false,
+        "onceDelay": "",
         "x": 229.99999618530273,
         "y": 324.99999141693115,
         "wires": [
@@ -2630,7 +2519,7 @@
         "type": "inject",
         "z": "58ae81fe.fc8ae",
         "name": "p4 \"0\"",
-        "topic": "/HL/Dm_078a87/cmd",
+        "topic": "",
         "payload": "{\"cmd\":\"pins_write\",\"pins\":{\"4\":0}}",
         "payloadType": "json",
         "repeat": "",
@@ -3053,118 +2942,6 @@
         "wires": []
     },
     {
-        "id": "a9ff4a55.906218",
-        "type": "ui_template",
-        "z": "32688592.0a19aa",
-        "group": "ae257199.19c84",
-        "name": "HTML template",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>The number is</p>\n<p ng-style=\"{color: (msg.payload || 0) % 2 === 0 ? 'green' : 'red'}\">\n  {{(msg.payload || 0) % 2 === 0 ? 'even' : 'odd'}}\n</p>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 260,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "90a0efdd.d4b44",
-        "type": "inject",
-        "z": "32688592.0a19aa",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "3",
-        "x": 150,
-        "y": 260,
-        "wires": [
-            [
-                "b12e9a6a.0f15d8"
-            ]
-        ]
-    },
-    {
-        "id": "b12e9a6a.0f15d8",
-        "type": "random",
-        "z": "32688592.0a19aa",
-        "name": "",
-        "low": "1",
-        "high": "10",
-        "inte": "true",
-        "property": "payload",
-        "x": 200,
-        "y": 300,
-        "wires": [
-            [
-                "a9ff4a55.906218"
-            ]
-        ]
-    },
-    {
-        "id": "c598b828.c55838",
-        "type": "ui_colour_picker",
-        "z": "32688592.0a19aa",
-        "name": "",
-        "label": "",
-        "group": "e87b0972.cfcab8",
-        "format": "hex",
-        "outformat": "string",
-        "showSwatch": true,
-        "showPicker": true,
-        "showValue": true,
-        "showAlpha": false,
-        "showLightness": true,
-        "dynOutput": "false",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "",
-        "x": 510,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b351a6d8.6645f8",
-        "type": "comment",
-        "z": "32688592.0a19aa",
-        "name": "TESTING: not implemented yet",
-        "info": "",
-        "x": 560,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "c6d469ad.aeda58",
-        "type": "trigger",
-        "z": "32688592.0a19aa",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "250",
-        "extend": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "name": "",
-        "x": 520,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9e9bfcf1.ec0c4",
         "type": "ui_dropdown",
         "z": "f95c6e59.5c919",
@@ -3172,69 +2949,69 @@
         "label": "pin #",
         "place": "pin # ???",
         "group": "857ece11.192e7",
-        "order": 2,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
         "options": [
             {
+                "label": "N/A",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "0",
+                "value": "0",
+                "type": "str"
+            },
+            {
                 "label": "1",
-                "value": 1,
-                "type": "num"
+                "value": "1",
+                "type": "str"
             },
             {
                 "label": "2",
-                "value": 2,
-                "type": "num"
+                "value": "2",
+                "type": "str"
             },
             {
                 "label": "3",
-                "value": 3,
-                "type": "num"
+                "value": "3",
+                "type": "str"
             },
             {
                 "label": "4",
-                "value": 4,
-                "type": "num"
+                "value": "4",
+                "type": "str"
             },
             {
                 "label": "5",
-                "value": 5,
-                "type": "num"
+                "value": "5",
+                "type": "str"
             },
             {
                 "label": "6",
-                "value": 6,
-                "type": "num"
+                "value": "6",
+                "type": "str"
             },
             {
                 "label": "7",
-                "value": 7,
-                "type": "num"
+                "value": "7",
+                "type": "str"
             },
             {
                 "label": "8",
-                "value": 8,
-                "type": "num"
-            },
-            {
-                "label": "9",
-                "value": 9,
-                "type": "num"
-            },
-            {
-                "label": "10",
-                "value": 10,
-                "type": "num"
+                "value": "8",
+                "type": "str"
             }
         ],
         "payload": "",
         "topic": "pin",
-        "x": 190,
+        "x": 370,
         "y": 190,
         "wires": [
             [
-                "ce57e7de.b6e868"
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3242,11 +3019,11 @@
         "id": "c725a467.e8c208",
         "type": "ui_dropdown",
         "z": "f95c6e59.5c919",
-        "name": "pin  write state",
-        "label": "pin write state",
+        "name": "value",
+        "label": "value",
         "place": "LOW/HIGH ???",
         "group": "857ece11.192e7",
-        "order": 4,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3264,79 +3041,11 @@
         ],
         "payload": "",
         "topic": "w",
-        "x": 160,
-        "y": 240,
+        "x": 370,
+        "y": 400,
         "wires": [
             [
-                "ce57e7de.b6e868"
-            ]
-        ]
-    },
-    {
-        "id": "fe9acb63.d2ab38",
-        "type": "debug",
-        "z": "f95c6e59.5c919",
-        "name": "Pin JSON",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "x": 590,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "5fc8fbb7.5a0414",
-        "type": "ui_button",
-        "z": "f95c6e59.5c919",
-        "name": "Submit Pin Data",
-        "group": "857ece11.192e7",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Submit",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "submit",
-        "x": 160,
-        "y": 140,
-        "wires": [
-            [
-                "ce57e7de.b6e868"
-            ]
-        ]
-    },
-    {
-        "id": "48c18a00.134cf8",
-        "type": "link out",
-        "z": "f95c6e59.5c919",
-        "name": "",
-        "links": [
-            "d1135c0.509fea8"
-        ],
-        "x": 545,
-        "y": 70,
-        "wires": []
-    },
-    {
-        "id": "76c189a5.a99648",
-        "type": "function",
-        "z": "f95c6e59.5c919",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 420,
-        "y": 90,
-        "wires": [
-            [
-                "fe9acb63.d2ab38",
-                "48c18a00.134cf8"
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3345,14 +3054,12 @@
         "type": "link in",
         "z": "e0c6f6b6.0d5c68",
         "name": "reset",
-        "links": [
-            "a5cbdf95.32add"
-        ],
-        "x": 83,
-        "y": 340,
+        "links": [],
+        "x": 305,
+        "y": 210,
         "wires": [
             [
-                "a81aab1e.101008"
+                "e311861f.9a3638"
             ]
         ]
     },
@@ -3396,26 +3103,6 @@
         ]
     },
     {
-        "id": "4be3f0ed.3229",
-        "type": "inject",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 110,
-        "y": 110,
-        "wires": [
-            [
-                "8783d77a.950728"
-            ]
-        ]
-    },
-    {
         "id": "389f3e53.965722",
         "type": "ui_dropdown",
         "z": "f95c6e59.5c919",
@@ -3423,7 +3110,7 @@
         "label": "mode",
         "place": "INPUT/OUTPUT/INT/OPENDRAIN ???",
         "group": "857ece11.192e7",
-        "order": 3,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3450,12 +3137,12 @@
             }
         ],
         "payload": "",
-        "topic": "mode",
-        "x": 190,
-        "y": 290,
+        "topic": "m",
+        "x": 370,
+        "y": 300,
         "wires": [
             [
-                "ce57e7de.b6e868"
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3467,7 +3154,7 @@
         "label": "pullup",
         "place": "select pullup? [default  true]",
         "group": "857ece11.192e7",
-        "order": 5,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3485,11 +3172,11 @@
         ],
         "payload": "",
         "topic": "pu",
-        "x": 190,
-        "y": 340,
+        "x": 370,
+        "y": 350,
         "wires": [
             [
-                "ce57e7de.b6e868"
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3501,11 +3188,16 @@
         "label": "pwm",
         "place": "select pwm?",
         "group": "857ece11.192e7",
-        "order": 8,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
         "options": [
+            {
+                "label": "N/A",
+                "value": "",
+                "type": "str"
+            },
             {
                 "label": "ON",
                 "value": true,
@@ -3519,11 +3211,12 @@
         ],
         "payload": "",
         "topic": "pwm",
-        "x": 190,
-        "y": 440,
+        "x": 370,
+        "y": 500,
         "wires": [
             [
-                "ce57e7de.b6e868"
+                "fef53a66.051ce8",
+                "6f8e3d82.ab3644"
             ]
         ]
     },
@@ -3531,28 +3224,30 @@
         "id": "781ad120.aee6c",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "pwm p4",
-        "label": "pwm p4",
-        "group": "41f3f0a9.18b08",
-        "order": 3,
+        "name": "enable pwm",
+        "label": "enable pwm",
+        "group": "f78522d2.3c171",
+        "order": 11,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "pwm",
         "style": "",
-        "onvalue": "{\"cmd\":\"pwm\",\"pins\":{\"8\":1}}",
-        "onvalueType": "json",
+        "onvalue": "true",
+        "onvalueType": "bool",
         "onicon": "fa-check-square",
         "oncolor": " #48f442",
-        "offvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"8\":0}}",
-        "offvalueType": "json",
+        "offvalue": "false",
+        "offvalueType": "bool",
         "officon": "fa-square-o ",
         "offcolor": "#f44256",
-        "x": 80,
-        "y": 640,
+        "x": 515,
+        "y": 1070,
         "wires": [
-            []
+            [
+                "82400b00.6543c8"
+            ]
         ]
     },
     {
@@ -3561,20 +3256,21 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "duty cycle",
         "label": "",
-        "group": "41f3f0a9.18b08",
-        "order": 4,
+        "group": "f78522d2.3c171",
+        "order": 12,
         "width": 0,
         "height": 0,
-        "passthru": true,
-        "topic": "duty",
+        "passthru": false,
+        "topic": "main_duty",
         "min": "0",
-        "max": "1024",
-        "step": "8",
-        "x": 80,
-        "y": 690,
+        "max": "1023",
+        "step": "1",
+        "x": 525,
+        "y": 1120,
         "wires": [
             [
-                "963c9408.df1e48"
+                "963c9408.df1e48",
+                "72fb8bf2.eae094"
             ]
         ]
     },
@@ -3584,69 +3280,38 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "frequency",
         "label": "",
-        "group": "41f3f0a9.18b08",
-        "order": 6,
+        "group": "f78522d2.3c171",
+        "order": 14,
         "width": 0,
         "height": 0,
-        "passthru": true,
-        "topic": "frequency",
+        "passthru": false,
+        "topic": "main_freq",
         "min": "0",
         "max": "1000",
-        "step": 1,
-        "x": 80,
-        "y": 740,
+        "step": "1",
+        "x": 525,
+        "y": 1170,
         "wires": [
             [
-                "8061b4fd.4aa5c8"
+                "8061b4fd.4aa5c8",
+                "72fb8bf2.eae094"
             ]
         ]
-    },
-    {
-        "id": "8061b4fd.4aa5c8",
-        "type": "ui_text",
-        "z": "e0c6f6b6.0d5c68",
-        "group": "41f3f0a9.18b08",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "frequency display",
-        "label": "frequency",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 290,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "87ea87f6.0a7c28",
         "type": "ui_text",
         "z": "e0c6f6b6.0d5c68",
-        "group": "6bf64492.b29f0c",
-        "order": 8,
+        "group": "ae257199.19c84",
+        "order": 10,
         "width": 0,
         "height": 0,
         "name": "t_cal display",
-        "label": "temp.calibrate",
+        "label": "calibrate.temp",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 440,
-        "y": 70,
-        "wires": []
-    },
-    {
-        "id": "963c9408.df1e48",
-        "type": "ui_text",
-        "z": "e0c6f6b6.0d5c68",
-        "group": "41f3f0a9.18b08",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "duty cycle display",
-        "label": "duty cycle",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 280.13330078125,
-        "y": 690.333251953125,
+        "x": 815,
+        "y": 170,
         "wires": []
     },
     {
@@ -3656,20 +3321,21 @@
         "name": "duty cycle",
         "label": "",
         "group": "857ece11.192e7",
-        "order": 9,
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": true,
         "topic": "duty",
         "min": "0",
         "max": "1024",
-        "step": "8",
-        "x": 180,
-        "y": 490,
+        "step": "32",
+        "x": 360,
+        "y": 550,
         "wires": [
             [
                 "d74285f8.afcf18",
-                "ce57e7de.b6e868"
+                "6f8e3d82.ab3644",
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3680,20 +3346,21 @@
         "name": "frequency",
         "label": "",
         "group": "857ece11.192e7",
-        "order": 11,
+        "order": 14,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "topic": "frequency",
+        "topic": "freq",
         "min": "0",
         "max": "1000",
-        "step": 1,
-        "x": 180,
-        "y": 540,
+        "step": "50",
+        "x": 360,
+        "y": 600,
         "wires": [
             [
                 "f790b3ed.1ed97",
-                "ce57e7de.b6e868"
+                "6f8e3d82.ab3644",
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3702,15 +3369,15 @@
         "type": "ui_text",
         "z": "f95c6e59.5c919",
         "group": "857ece11.192e7",
-        "order": 12,
+        "order": 15,
         "width": 0,
         "height": 0,
         "name": "frequency display",
         "label": "frequency",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 460,
-        "y": 540,
+        "x": 610,
+        "y": 600,
         "wires": []
     },
     {
@@ -3718,32 +3385,16 @@
         "type": "ui_text",
         "z": "f95c6e59.5c919",
         "group": "857ece11.192e7",
-        "order": 10,
+        "order": 13,
         "width": 0,
         "height": 0,
         "name": "duty cycle display",
         "label": "duty cycle",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 460,
-        "y": 490,
+        "x": 610,
+        "y": 550,
         "wires": []
-    },
-    {
-        "id": "266b86ec.3824ba",
-        "type": "link in",
-        "z": "cae895a0.8ab828",
-        "name": "CONFIGURATION",
-        "links": [
-            "f2eff67f.c44e58"
-        ],
-        "x": 605,
-        "y": 60,
-        "wires": [
-            [
-                "70541816.25e608"
-            ]
-        ]
     },
     {
         "id": "f2eff67f.c44e58",
@@ -3752,60 +3403,12 @@
         "name": "CONFIGURATION",
         "links": [
             "266b86ec.3824ba",
-            "d060982b.8cfe98"
+            "d060982b.8cfe98",
+            "2e2c0253.a3741e"
         ],
-        "x": 1125,
-        "y": 270,
+        "x": 1480,
+        "y": 350,
         "wires": []
-    },
-    {
-        "id": "3e10bf56.b8b77",
-        "type": "ui_template",
-        "z": "cae895a0.8ab828",
-        "group": "ae257199.19c84",
-        "name": "Instance Name 4",
-        "order": 6,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.name}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1170,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a9432185.b9f85",
-        "type": "debug",
-        "z": "f95c6e59.5c919",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 560,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "ce57e7de.b6e868",
-        "type": "function",
-        "z": "f95c6e59.5c919",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 420,
-        "y": 280,
-        "wires": [
-            [
-                "a9432185.b9f85"
-            ]
-        ]
     },
     {
         "id": "18f722a5.0004dd",
@@ -3815,11 +3418,16 @@
         "label": "trigger",
         "place": "select type of trigger",
         "group": "857ece11.192e7",
-        "order": 6,
+        "order": 10,
         "width": 0,
         "height": 0,
         "passthru": false,
         "options": [
+            {
+                "label": "none",
+                "value": 5,
+                "type": "num"
+            },
             {
                 "label": "up",
                 "value": 0,
@@ -3848,11 +3456,11 @@
         ],
         "payload": "",
         "topic": "t",
-        "x": 190,
-        "y": 390,
+        "x": 370,
+        "y": 450,
         "wires": [
             [
-                "ce57e7de.b6e868"
+                "fef53a66.051ce8"
             ]
         ]
     },
@@ -3864,8 +3472,8 @@
         "links": [
             "de8ec3f8.cf1a1"
         ],
-        "x": 1155,
-        "y": 540,
+        "x": 1330,
+        "y": 530,
         "wires": []
     },
     {
@@ -3950,12 +3558,12 @@
         "id": "b9b3f548.4fa638",
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
-        "name": "topic = cmd",
-        "func": "msg.topic = \"/HL/\" + global.get('activeNode') + \"/cmd\"\nreturn msg;",
+        "name": "topic / cmd",
+        "func": "msg.topic = \"/HL/\" + global.get('activeNodeId') + \"/cmd\"\n\nnode.status({text:\"Topic: \" + msg.topic});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 680,
-        "y": 130,
+        "x": 1055,
+        "y": 230,
         "wires": [
             [
                 "ab4e9788.ced9c8",
@@ -3972,8 +3580,8 @@
         "qos": "",
         "retain": "",
         "broker": "a4bd0da.b2f13f",
-        "x": 840,
-        "y": 130,
+        "x": 1285,
+        "y": 230,
         "wires": []
     },
     {
@@ -3981,87 +3589,14 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 850,
-        "y": 90,
-        "wires": []
-    },
-    {
-        "id": "e69e5b90.280ee8",
-        "type": "comment",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "activeNode selection",
-        "info": "",
-        "x": 110,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "d007d18b.f018c",
-        "type": "inject",
-        "z": "cae895a0.8ab828",
-        "name": "inject TEST 2 partial JSON object",
-        "topic": "",
-        "payload": "[\"Dm_078a86\",{\"tmpr\":72,\"s_io\":true,\"mqtt\":true}]",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 270,
-        "y": 300,
-        "wires": [
-            [
-                "70541816.25e608",
-                "26cb6cde.3770f4"
-            ]
-        ]
-    },
-    {
-        "id": "4de71002.4fde2",
-        "type": "inject",
-        "z": "cae895a0.8ab828",
-        "name": "inject TEST 1 partial JSON object",
-        "topic": "",
-        "payload": "[\"Dm_078a85\",{\"tmpr\":72,\"s_io\":true,\"mqtt\":true}]",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 270,
-        "y": 230,
-        "wires": [
-            [
-                "70541816.25e608",
-                "26cb6cde.3770f4"
-            ]
-        ]
-    },
-    {
-        "id": "ae641d6f.9a799",
-        "type": "inject",
-        "z": "cae895a0.8ab828",
-        "name": "inject TEST 1 full JSON object",
-        "topic": "",
-        "payload": "[\"Dm_078a85\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"Dm_078a87\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\" TEST 1\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 280,
+        "complete": "payload",
+        "x": 1315,
         "y": 190,
-        "wires": [
-            [
-                "70541816.25e608",
-                "26cb6cde.3770f4"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "b7f58d69.ed362",
@@ -4069,24 +3604,22 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "PINS",
         "links": [
-            "8e35a994.f4baa8",
             "7fad08d5.65ecd8"
         ],
-        "x": 915,
-        "y": 540,
+        "x": 1330,
+        "y": 590,
         "wires": []
     },
     {
         "id": "7fad08d5.65ecd8",
         "type": "link in",
         "z": "cae895a0.8ab828",
-        "name": "",
+        "name": "Store Node-Pins State",
         "links": [
-            "a5cbdf95.32add",
             "b7f58d69.ed362"
         ],
-        "x": 655,
-        "y": 300,
+        "x": 615,
+        "y": 140,
         "wires": [
             [
                 "3a537772.082828"
@@ -4098,58 +3631,26 @@
         "type": "function",
         "z": "cae895a0.8ab828",
         "name": "update global k9-node-pins Object",
-        "func": "\nvar local    = global.get('k9-node-pins') || {};\nvar myname   = msg.topic.split(\"/\") || \"error\";\nmyname = myname[2]\nvar myobject = msg.payload || {\"error\":\"not found\"};\n\n\n\nif (msg.reset === true) local = {}\n    else {\n        if (typeof local[myname] === \"undefined\" ) local[myname] = {};\n        for (var y in myobject)\n                local[myname][y] = myobject[y]; \n    }\nglobal.set('k9-node-pins',local)\n    \n// count number of K9 nodes\nvar count = 0;\nfor (var x in local) ++count;\nglobal.set('k9-node-pins-count',count);\nsColor = \"red\";\nsFill = 'ring'\nif (count > 0) {\n    sColor = \"green\";sFill = 'dot';\n    }\nnode.status({shape:sFill,fill:sColor,text:\"K9-node-pins\" + \" | \" + count});\n\nmsg.id = myname\n\nreturn msg;",
+        "func": "\nvar local    = global.get('k9-nodes-pins') || {};\nvar myname   = msg.topic.split(\"/\") || \"error\";\nmyname = myname[2]\nvar myobject = msg.payload || {\"error\":\"not found\"};\n\n\n\nif (msg.reset === true) local = {}\n    else {\n        if (typeof local[myname] === \"undefined\" ) local[myname] = {};\n        for (var y in myobject)\n                local[myname][y] = myobject[y]; \n    }\nglobal.set('k9-nodes-pins',local)\n    \n// count number of K9 nodes\nvar count = 0;\nfor (var x in local) ++count;\nglobal.set('k9-nodes-pins-count',count);\nsColor = \"red\";\nsFill = 'ring'\nif (count > 0) {\n    sColor = \"green\";sFill = 'dot';\n    }\nnode.status({shape:sFill,fill:sColor,text:\"k9-nodes-pins\" + \" | \" + count});\n\nmsg.id = myname\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 880,
-        "y": 300,
-        "wires": [
-            [
-                "86a7a174.c7f2e"
-            ]
-        ]
-    },
-    {
-        "id": "86a7a174.c7f2e",
-        "type": "ui_template",
-        "z": "cae895a0.8ab828",
-        "group": "9cf22ad5.af9e78",
-        "name": "Instance PIN",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.id}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1150,
-        "y": 300,
+        "y": 140,
         "wires": [
             []
         ]
     },
     {
-        "id": "26cb6cde.3770f4",
-        "type": "link out",
-        "z": "cae895a0.8ab828",
-        "name": "test device update",
-        "links": [
-            "9be733b0.94fd6"
-        ],
-        "x": 485,
-        "y": 250,
-        "wires": []
-    },
-    {
         "id": "9be733b0.94fd6",
         "type": "link in",
         "z": "e0c6f6b6.0d5c68",
-        "name": "",
+        "name": "test node configuration",
         "links": [
-            "26cb6cde.3770f4"
+            "26cb6cde.3770f4",
+            "9bf85b1b.5a9c98"
         ],
-        "x": 1225,
-        "y": 280,
+        "x": 1640,
+        "y": 350,
         "wires": [
             [
                 "386b73c3.aaf41c"
@@ -4160,14 +3661,14 @@
         "id": "67317113.3c897",
         "type": "ui_dropdown",
         "z": "cae895a0.8ab828",
-        "name": "",
-        "label": "rick_admin",
+        "name": "select active node Main",
+        "label": "",
         "place": "?",
-        "group": "6bf64492.b29f0c",
-        "order": 1,
+        "group": "689116a6.ccd8d8",
+        "order": 2,
         "width": "0",
         "height": "0",
-        "passthru": false,
+        "passthru": true,
         "options": [
             {
                 "label": "",
@@ -4176,9 +3677,9 @@
             }
         ],
         "payload": "",
-        "topic": "ID",
-        "x": 670,
-        "y": 410,
+        "topic": "",
+        "x": 1220,
+        "y": 240,
         "wires": [
             [
                 "3d09f36d.0d89cc"
@@ -4189,19 +3690,19 @@
         "id": "3d09f36d.0d89cc",
         "type": "function",
         "z": "cae895a0.8ab828",
-        "name": "select device for flow context",
-        "func": "var activeNode = \"activeNode:\" + msg.payload;\nnode.status({text:activeNode});\nglobal.set('activeNode', msg.payload)\nreturn msg;",
+        "name": "select node1",
+        "func": "var activeNode = \"activeNodeId | \" + msg.payload;\n\n//node.status({shape:sFill,fill:sColor,text:\"K9-node-pins\" + \" | \" + count});\nnode.status({text:activeNode});\nglobal.set('activeNodeId', msg.payload);\n\n//var local = global.get('k9-nodes');\n//var xname = local[msg.payload].name || \"?\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 870,
-        "y": 410,
+        "x": 1500,
+        "y": 300,
         "wires": [
             [
                 "1bf6ae99.c49751",
                 "9d53568a.32d238",
-                "57777ce5.ead814",
-                "e37010bb.cead2",
-                "b1dd61b4.aa282"
+                "780c075c.596208",
+                "9540e15b.52ff",
+                "898c6775.b367a8"
             ]
         ]
     },
@@ -4209,17 +3710,17 @@
         "id": "1bf6ae99.c49751",
         "type": "ui_template",
         "z": "cae895a0.8ab828",
-        "group": "6bf64492.b29f0c",
-        "name": "Device Selection 1",
-        "order": 2,
+        "group": "689116a6.ccd8d8",
+        "name": "node selection Main",
+        "order": 1,
         "width": "0",
         "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    <h3 align = center>{{global.get('device')}}</h3>\n    </span>\n</div>",
+        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    </span>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1170,
-        "y": 410,
+        "x": 1730,
+        "y": 240,
         "wires": [
             []
         ]
@@ -4229,125 +3730,2686 @@
         "type": "ui_template",
         "z": "cae895a0.8ab828",
         "group": "857ece11.192e7",
-        "name": "Device Selection 2",
-        "order": 1,
+        "name": "node selection Config",
+        "order": 3,
         "width": "0",
         "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    <h3 align = center>{{global.get('device')}}</h3>\n    </span>\n</div>",
+        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    </span>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1170,
-        "y": 450,
+        "x": 1730,
+        "y": 270,
         "wires": [
             []
         ]
     },
     {
-        "id": "57777ce5.ead814",
+        "id": "b8e7160c.d0bec8",
+        "type": "comment",
+        "z": "cae895a0.8ab828",
+        "name": "activeNode selection",
+        "info": "",
+        "x": 1460,
+        "y": 210,
+        "wires": []
+    },
+    {
+        "id": "e23afacb.795c58",
+        "type": "comment",
+        "z": "cae895a0.8ab828",
+        "name": "K9-node-pins [global]",
+        "info": "",
+        "x": 860,
+        "y": 90,
+        "wires": []
+    },
+    {
+        "id": "dae7a56b.f6fd28",
+        "type": "ui_dropdown",
+        "z": "cae895a0.8ab828",
+        "name": "select active node Config",
+        "label": "",
+        "place": "?",
+        "group": "857ece11.192e7",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1220,
+        "y": 290,
+        "wires": [
+            [
+                "3d09f36d.0d89cc"
+            ]
+        ]
+    },
+    {
+        "id": "780c075c.596208",
         "type": "ui_template",
         "z": "cae895a0.8ab828",
-        "group": "ae257199.19c84",
-        "name": "Device Selection 3",
-        "order": 1,
+        "group": "da741b7c.fa4ed8",
+        "name": "node selection Review",
+        "order": 3,
         "width": "0",
         "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    <h3 align = center>{{global.get('device')}}</h3>\n    </span>\n</div>",
+        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    </span>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1170,
-        "y": 490,
+        "x": 1730,
+        "y": 330,
+        "wires": [
+            [
+                "c98e31a9.11091",
+                "e1e9f575.693ef8"
+            ]
+        ]
+    },
+    {
+        "id": "2c61747a.1a3c0c",
+        "type": "ui_dropdown",
+        "z": "cae895a0.8ab828",
+        "name": "select active node Review",
+        "label": "",
+        "place": "?",
+        "group": "da741b7c.fa4ed8",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1220,
+        "y": 340,
+        "wires": [
+            [
+                "3d09f36d.0d89cc"
+            ]
+        ]
+    },
+    {
+        "id": "58707080.df62a",
+        "type": "comment",
+        "z": "cae895a0.8ab828",
+        "name": "WORKAROUND: Why is this necessary",
+        "info": "cannot get this to work as a direct output from\n'update global k9-nodes Object'\n\nmsg.options is not passed to the 2nd and 3rd instances",
+        "x": 520,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f1d674c7.4c8e28",
+        "type": "ui_button",
+        "z": "cae895a0.8ab828",
+        "name": "refresh Node choices [Configure]",
+        "group": "857ece11.192e7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "refresh Node choices",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "d25cf1fb.cf6de"
+            ]
+        ]
+    },
+    {
+        "id": "9540e15b.52ff",
+        "type": "ui_template",
+        "z": "cae895a0.8ab828",
+        "group": "b5372e87.bef79",
+        "name": "node selection Messages",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    </span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1740,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "dcffde3a.e762f",
-        "type": "inject",
+        "id": "73e6e690.5f0418",
+        "type": "ui_dropdown",
         "z": "cae895a0.8ab828",
-        "name": "activeNode choices",
-        "topic": "rick_admin",
-        "payload": "[{\"Thingee1\":\"D1m_078a87\"},{\"Thingee2\":\"D1m_d0fbc3\"},{\"Thingee3\":\"D1m_078a87\"}]",
-        "payloadType": "str",
+        "name": "select active node Messages",
+        "label": "",
+        "place": "?",
+        "group": "b5372e87.bef79",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1230,
+        "y": 390,
+        "wires": [
+            [
+                "3d09f36d.0d89cc"
+            ]
+        ]
+    },
+    {
+        "id": "77f5e110.f672d",
+        "type": "ui_button",
+        "z": "cae895a0.8ab828",
+        "name": "refresh Node choices [Review]",
+        "group": "da741b7c.fa4ed8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "refresh Node choices",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 500,
+        "y": 390,
+        "wires": [
+            [
+                "d25cf1fb.cf6de"
+            ]
+        ]
+    },
+    {
+        "id": "c9cf5891.d30498",
+        "type": "ui_button",
+        "z": "cae895a0.8ab828",
+        "name": "refresh Node choices [Message]",
+        "group": "b5372e87.bef79",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "refresh Node choices",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 500,
+        "y": 330,
+        "wires": [
+            [
+                "d25cf1fb.cf6de"
+            ]
+        ]
+    },
+    {
+        "id": "fbe17fbd.bf3d4",
+        "type": "ui_template",
+        "z": "cae895a0.8ab828",
+        "group": "57b700a8.c08e8",
+        "name": "Node Configuration",
+        "order": 1,
+        "width": "6",
+        "height": "10",
+        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.payload[0]}}</span> </p>\n<p>D (Device) Object</p>\n<ol>\n<li>dbg:     <span style=\"color:LightBlue\"> {{msg.payload[1].dbg}}</span></li>    \n<li>tmpr:    <span style=\"color:LightBlue\"> {{msg.payload[1].tmpr}}</span></li>\n<li>screen:  <span style=\"color:LightBlue\"> {{msg.payload[1].screen}}</span></li>\n<li>mqtt:    <span style=\"color:LightBlue\"> {{msg.payload[1].mqtt}}</span></li>\n<li>heap_min:<span style=\"color:LightBlue\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>flashid: <span style=\"color:LightBlue\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize:<span style=\"colorLightBlue\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:LightBlue\"> {{msg.payload[1].heap}}</span></li>\n<li>pins: \t <span style=\"color:LightBlue\"> {{msg.payload[1].pins}}</span></li>\n<li>chipid:  <span style=\"color:LightBlue\"> {{msg.payload[1].chipid}}</span></li>\n<li>ID: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ID}}</span></li>\n<li>LED: \t <span style=\"color:LightBlue\"> {{msg.payload[1].LED}}</span></li>\n<li>t_cal:\t <span style=\"color:LightBlue\"> {{msg.payload[1].t_cal}}</span></li>\n<li>name: \t <span style=\"color:LightBlue\"> {{msg.payload[1].name}}</span></li>\n<li>ap_mac:  <span style=\"color:LightBlue\"> {{msg.payload[1].ap_mac}}</span> </li>\n<li>bootreason_extnd: <span style=\"color:LightBlue\"> {{msg.payload[1].bootreason_extnd}}</span> </li>\n<li>ip: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ip}}</span></li>\n<li>sta_mac: <span style=\"color:LightBlue\"> {{msg.payload[1].sta_mac}}</span></li>\n<li>type: \t <span style=\"color:LightBlue\"> {{msg.payload[1].type}}</span></li>\n<li>msg: \t <span style=\"color:LightBlue\"> {{msg.payload[1].msg}}</span></li>\n</ol>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 2160,
+        "y": 330,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db2c0ae4.29bfe8",
+        "type": "ui_template",
+        "z": "cae895a0.8ab828",
+        "group": "5fec812e.210f3",
+        "name": "Pin Config & Status",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.id}}</span> </p>\n<ol start = 0>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"0\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"1\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"2\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"3\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"4\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"5\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"6\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"7\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"8\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"9\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"10\"]}}</span></li>\n</ol>\n<h3>Pin States Legend</h3>\n<a style=\"color:LightBlue;\"  target=\"_blank\" href=\"https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode\">gpio docs</a>\n<h4>m (modes)</h4>\n<ol start = 0>\n<li>gpio.INPUT</li> \n<li>gpio.OUTPUT</li> \n<li>gpio.INT</li>\n<li>gpio.OPENDRAIN</li>  \n</ol>\n<h4>r (read state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>w (write state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>pu (pullup)</h4>\n<ol start = 0>\n<li>FLOAT  true</li>\n<li>PULLUP false</li>\n</ol>\n<p>pullup gpio.PULLUP enables the weak pull-up resistor; </p>\n<p>default is gpio.FLOAT</p>\n<h4>t  (trigger type)</h4>\n<ul>\n<li>\"up\"</li> \n<li>\"down\"</li> \n<li>\"both\"</li> \n<li>\"low\"</li> \n<li>\"high\"</li>\n</ul>\n<h4>pwm  (pulse width modulation)</h4>\n<ul>\n<li>ON: \"true\"</li> \n<li>OFF: \"false\"</li> \n</ul>\n<h4>freq (frequency for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>pwm frequency (0 - 1000 Hz)</li> \n</ul>\n<h4>duty (duty cycle for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>duty cycle (0-1024)</li> \n</ul>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 2160,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f19aeb27.19c838",
+        "type": "debug",
+        "z": "cae895a0.8ab828",
+        "name": "Review Node Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 2170,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "c98e31a9.11091",
+        "type": "function",
+        "z": "cae895a0.8ab828",
+        "name": "k9-nodes",
+        "func": "var local = global.get('k9-nodes');\nmsg.payload = [msg.payload,local[msg.payload]];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1930,
+        "y": 330,
+        "wires": [
+            [
+                "fbe17fbd.bf3d4"
+            ]
+        ]
+    },
+    {
+        "id": "e1e9f575.693ef8",
+        "type": "function",
+        "z": "cae895a0.8ab828",
+        "name": "k9-nodes-pins",
+        "func": "var local = global.get('k9-nodes-pins');\nmsg.id = msg.payload\nmsg.payload = local[msg.payload];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1950,
+        "y": 360,
+        "wires": [
+            [
+                "db2c0ae4.29bfe8",
+                "f19aeb27.19c838"
+            ]
+        ]
+    },
+    {
+        "id": "1d3520aa.3286cf",
+        "type": "ui_switch",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D3",
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"3\":1}}",
+        "onvalueType": "json",
+        "onicon": "fa-check-square",
+        "oncolor": " #48f442",
+        "offvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"3\":0}}",
+        "offvalueType": "json",
+        "officon": "fa-square-o ",
+        "offcolor": "#f44256",
+        "x": 795,
+        "y": 420,
+        "wires": [
+            [
+                "b9b3f548.4fa638"
+            ]
+        ]
+    },
+    {
+        "id": "5ee30c83.ec6a64",
+        "type": "ui_switch",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D5",
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"5\":1}}",
+        "onvalueType": "json",
+        "onicon": "fa-check-square",
+        "oncolor": " #48f442",
+        "offvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"5\":0}}",
+        "offvalueType": "json",
+        "officon": "fa-square-o ",
+        "offcolor": "#f44256",
+        "x": 793,
+        "y": 526,
+        "wires": [
+            [
+                "b9b3f548.4fa638"
+            ]
+        ]
+    },
+    {
+        "id": "9fb6dd05.c3ecc",
+        "type": "ui_switch",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D6",
+        "label": "{{msg.topic}}",
+        "group": "f78522d2.3c171",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"6\":1}}",
+        "onvalueType": "json",
+        "onicon": "fa-check-square",
+        "oncolor": " #48f442",
+        "offvalue": "{\"cmd\":\"pins_write\",\"pins\":{\"6\":0}}",
+        "offvalueType": "json",
+        "officon": "fa-square-o ",
+        "offcolor": "#f44256",
+        "x": 793,
+        "y": 580,
+        "wires": [
+            [
+                "b9b3f548.4fa638"
+            ]
+        ]
+    },
+    {
+        "id": "8061b4fd.4aa5c8",
+        "type": "ui_text",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "f78522d2.3c171",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "name": "frequency display",
+        "label": "frequency",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 765,
+        "y": 1170,
+        "wires": []
+    },
+    {
+        "id": "963c9408.df1e48",
+        "type": "ui_text",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "f78522d2.3c171",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "duty cycle display",
+        "label": "duty cycle",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 765,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "a80a98f7.2e0478",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "e87b0972.cfcab8",
+        "name": "Even/Odd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>number is</p>\n<p ng-style=\"{color: (msg.payload || 0) % 2 === 0 ? 'green' : 'red'}\">\n  {{(msg.payload || 0) % 2 === 0 ? 'even' : 'odd'}}\n</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 650,
+        "y": 1270,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6074c9a.3e704",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "test Angular feature",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "x": 285,
+        "y": 1270,
+        "wires": [
+            [
+                "452e3811.0c3668"
+            ]
+        ]
+    },
+    {
+        "id": "452e3811.0c3668",
+        "type": "random",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "low": "1",
+        "high": "10",
+        "inte": "true",
+        "property": "payload",
+        "x": 495,
+        "y": 1270,
+        "wires": [
+            [
+                "a80a98f7.2e0478"
+            ]
+        ]
+    },
+    {
+        "id": "2c0b269c.921f4a",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 2 fullJSON object",
+        "topic": "",
+        "payload": "[\"Dm_078a86\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"Dm_078a87\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\" TEST 2\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "d2a99842.f42d28",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 2 partial JSON object",
+        "topic": "",
+        "payload": "[\"Dm_078a86\",{\"tmpr\":72,\"s_io\":true,\"mqtt\":true}]",
+        "payloadType": "json",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "x": 670,
+        "y": 350,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "e338167f.378388",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 1 partial JSON object",
+        "topic": "",
+        "payload": "[\"Dm_078a85\",{\"tmpr\":72,\"s_io\":true,\"mqtt\":true}]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "9bf85b1b.5a9c98",
+        "type": "link out",
+        "z": "58ae81fe.fc8ae",
+        "name": "test node DB update",
+        "links": [
+            "9be733b0.94fd6"
+        ],
+        "x": 965,
+        "y": 350,
+        "wires": []
+    },
+    {
+        "id": "e3f542a3.64beb",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 3 full JSON object",
+        "topic": "",
+        "payload": "[\"D1m_078a87\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"Dm_078a87\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\"Thing 1\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "x": 660,
+        "y": 230,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "a7e554c2.e67bc8",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 1 full JSON object",
+        "topic": "",
+        "payload": "[\"Dm_078a85\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"Dm_078a87\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\" TEST 1\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "x": 660,
+        "y": 170,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "5878c0e6.c823d",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "inject TEST 4 full JSON object",
+        "topic": "",
+        "payload": "[\"D1m_d0fbc3\",{\"tmpr\":0,\"s_io\":false,\"mqtt\":false,\"heap_min\":4000,\"flashid\":1458415,\"flashsize\":4194304,\"heap\":12976,\"pins\":9,\"chipid\":494215,\"ID\":\"D1m_d0fbc3\",\"LED\":4,\"type\":\"Dm\",\"t_cal\":0,\"name\":\"Thing 2\",\"ap_mac\":\"62:01:94:07:8a:87\",\"bootreason_extnd\":3,\"ip\":\"192.168.1.145\",\"sta_mac\":\"60:01:94:07:8a:87\"}]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "9bf85b1b.5a9c98",
+                "4ba377b9.595dd8"
+            ]
+        ]
+    },
+    {
+        "id": "4ba377b9.595dd8",
+        "type": "link out",
+        "z": "58ae81fe.fc8ae",
+        "name": "Insert Node Coniguration",
+        "links": [
+            "266b86ec.3824ba",
+            "2e2c0253.a3741e"
+        ],
+        "x": 975,
+        "y": 170,
+        "wires": []
+    },
+    {
+        "id": "e89ed39a.98a4c",
+        "type": "comment",
+        "z": "58ae81fe.fc8ae",
+        "name": "Test Node Configuration",
+        "info": "",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b8394fd1.c86a8",
+        "type": "comment",
+        "z": "58ae81fe.fc8ae",
+        "name": "Test Pin Configuration for specific node",
+        "info": "",
         "x": 230,
-        "y": 410,
-        "wires": [
-            [
-                "22d064aa.af3e0c"
-            ]
-        ]
+        "y": 30,
+        "wires": []
     },
     {
-        "id": "e37010bb.cead2",
-        "type": "ui_template",
+        "id": "9c8a90f7.ef45a",
+        "type": "comment",
         "z": "cae895a0.8ab828",
-        "group": "b5372e87.bef79",
-        "name": "Device Selection 4",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    <h3 align = center>{{global.get('device')}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1170,
-        "y": 530,
+        "name": "Test msg.option menu loading",
+        "info": "",
+        "x": 1200,
+        "y": 30,
+        "wires": []
+    },
+    {
+        "id": "93808380.eb5b7",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Filter topic and direct to output",
+        "func": "var mynode   = msg.topic.split(\"/\") || \"error\";\nmynode = mynode[2]\n\nnode.status({text:\"node | \" + mynode});\n\nvar msg1 = { payload:msg.payload.ipins[\"3\"] };\nvar msg2 = { payload:msg.payload.ipins[\"5\"] };\nvar msg3 = { payload:msg.payload.ipins[\"6\"] };\n\nreturn [msg1, msg2, msg3 ];\n",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 1890,
+        "y": 800,
         "wires": [
+            [],
+            [],
             []
+        ],
+        "outputLabels": [
+            "3",
+            "5",
+            "6"
         ]
     },
     {
-        "id": "b1dd61b4.aa282",
-        "type": "ui_template",
+        "id": "d25cf1fb.cf6de",
+        "type": "change",
         "z": "cae895a0.8ab828",
-        "group": "41f3f0a9.18b08",
-        "name": "Device Selection 5",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    <h3 align = center>{{global.get('device')}}</h3>\n    </span>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1170,
-        "y": 570,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "22d064aa.af3e0c",
-        "type": "json",
-        "z": "cae895a0.8ab828",
-        "name": "",
-        "property": "options",
+        "name": "msg.options",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "nodeList",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "activeNodeId",
+                "tot": "global"
+            }
+        ],
         "action": "",
-        "pretty": false,
-        "x": 420,
-        "y": 410,
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 390,
         "wires": [
             [
-                "14eb61a1.59ac0e"
+                "73e6e690.5f0418",
+                "67317113.3c897",
+                "dae7a56b.f6fd28",
+                "2c61747a.1a3c0c",
+                "3d09f36d.0d89cc"
             ]
         ]
     },
     {
-        "id": "14eb61a1.59ac0e",
-        "type": "debug",
-        "z": "cae895a0.8ab828",
+        "id": "4496376b.39c3d8",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
         "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.3",
+        "x": 395,
+        "y": 830,
+        "wires": [
+            [
+                "940f7e18.2caaa"
+            ]
+        ]
+    },
+    {
+        "id": "940f7e18.2caaa",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Debug mode",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "enabled",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 545,
+        "y": 830,
+        "wires": [
+            [
+                "fe86d77d.496198"
+            ]
+        ]
+    },
+    {
+        "id": "d7c9135b.18fa7",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D0o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 373,
+        "wires": [
+            [
+                "2f7e62f.197529e"
+            ]
+        ]
+    },
+    {
+        "id": "3fafb9ad.589dc6",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "tmpr",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.tmpr",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1435,
+        "y": 510,
+        "wires": [
+            [
+                "d25f9b73.c3e698",
+                "ee0875d8.d48bd8"
+            ]
+        ]
+    },
+    {
+        "id": "2aee8df5.7cf7c2",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "heap",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.heap",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1435,
+        "y": 560,
+        "wires": [
+            [
+                "67adc343.0da6fc",
+                "90cba916.f5af68"
+            ]
+        ]
+    },
+    {
+        "id": "e311861f.9a3638",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 170,
+        "wires": [
+            [
+                "5a46baa7.256964"
+            ]
+        ]
+    },
+    {
+        "id": "ade6b40d.463f78",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "clr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\"\",{}]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1605,
+        "y": 430,
+        "wires": [
+            [
+                "386b73c3.aaf41c"
+            ]
+        ]
+    },
+    {
+        "id": "29c0742d.f060cc",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "[ID]/configuration",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1545,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "1b33a599.c820ba",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D3 Input",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1007,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c83d490.3328bc",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D5 Input",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1067,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "703bf0e3.2cf42",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D6 Input",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0)  === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1097,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee510517.a50df8",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D3i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[3]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[3]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1007,
+        "wires": [
+            [
+                "1b33a599.c820ba"
+            ]
+        ]
+    },
+    {
+        "id": "188159ac.e1b356",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D5i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[5]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[5]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1067,
+        "wires": [
+            [
+                "5c83d490.3328bc"
+            ]
+        ]
+    },
+    {
+        "id": "65e96fe1.8cbbf",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D0 Input",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0)  === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 977,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1800d512.2f0bfb",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D7 Input",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1127,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3008250d.ebd0da",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D8 Input",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1157,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b09a59.bf5355a",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D6i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[6]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[6]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1097,
+        "wires": [
+            [
+                "703bf0e3.2cf42"
+            ]
+        ]
+    },
+    {
+        "id": "e6c5630a.b48e6",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D7i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[7]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[7]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1127,
+        "wires": [
+            [
+                "1800d512.2f0bfb"
+            ]
+        ]
+    },
+    {
+        "id": "f327e4a8.97d5c8",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D8i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[8]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[8]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1157,
+        "wires": [
+            [
+                "3008250d.ebd0da"
+            ]
+        ]
+    },
+    {
+        "id": "852ce96f.22d158",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D0i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 977,
+        "wires": [
+            [
+                "65e96fe1.8cbbf"
+            ]
+        ]
+    },
+    {
+        "id": "d4e58902.fe58b8",
+        "type": "ui_template",
+        "z": "cae895a0.8ab828",
+        "group": "689116a6.ccd8d8",
+        "name": "#K9-nodes",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "format": "<div>\n    <h4 align = center>#K9-nodes = {{msg.count}}</h4>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1180,
+        "y": 190,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "987405ef.c3c3b8",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "ae257199.19c84",
+        "name": "D4 Input",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1800,
+        "y": 1037,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d0f4a7f.7681d6",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D4i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[4]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnabled[4]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 1037,
+        "wires": [
+            [
+                "987405ef.c3c3b8"
+            ]
+        ]
+    },
+    {
+        "id": "fef53a66.051ce8",
+        "type": "function",
+        "z": "f95c6e59.5c919",
+        "name": "save param",
+        "func": "flow.set(msg.topic,msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 190,
+        "wires": [
+            [
+                "387de805.cfe598"
+            ]
+        ]
+    },
+    {
+        "id": "73a90817.e555c8",
+        "type": "ui_button",
+        "z": "f95c6e59.5c919",
+        "name": "Submit Pin Data",
+        "group": "857ece11.192e7",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit Pin Config",
+        "color": "Lime",
+        "bgcolor": "SlateGray",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "store",
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "387de805.cfe598"
+            ]
+        ]
+    },
+    {
+        "id": "387de805.cfe598",
+        "type": "function",
+        "z": "f95c6e59.5c919",
+        "name": "create cmd \"pins_config\"",
+        "func": "var pin       = flow.get('pin')  || \"4\";\nvar name      = flow.get('n')    || \"\";\nvar m         = flow.get('m')    || 1;\nvar pu        = flow.get('pu')   || 1;\nvar w         = flow.get('w')    || 1 ;\nvar t         = flow.get('t')    || 5;\nvar pwm       = flow.get('pwm')  || \"\";\nvar duty      = flow.get('duty') || 512;\nvar freq      = flow.get('freq') || 500;\n\nvar mode      = m;\nvar pinConfig = {};\nvar pinObject = {};\n\nswitch (mode) {\n    case 0:\n        if (t === 5) pinConfig = {m,pu};\n        else pinConfig = {m,pu,t};\n        break;\n    case 1:\n        if (pwm === \"\") pinConfig = {m,w};\n        else  pinConfig = {m,w,pwm,duty,freq};\n        break;\n    case 2:\n        pinConfig = {};\n        break;\n    case 3:\n        pinConfig = {};\n        break;\n}\nif ( name !== \"\") pinConfig.n = name //add pin Name if it is not blank\n\npinObject[pin] = pinConfig;\n\nmsg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 880,
+        "y": 190,
+        "wires": [
+            [
+                "336ee02c.af737",
+                "360676e2.1fbe2a"
+            ]
+        ]
+    },
+    {
+        "id": "7a509c12.800984",
+        "type": "function",
+        "z": "f95c6e59.5c919",
+        "name": "Clear Pin data",
+        "func": "flow.set('pin',  null);\nflow.set('n',  null);\nflow.set('m', null);\nflow.set('pu',   null);\nflow.set('w',    null);\nflow.set('t',    null);\nflow.set('pwm',  null);\nflow.set('duty', null);\nflow.set('freq', null);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 290,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3a21c77.4c108",
+        "type": "inject",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "topic": "Clear",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 680,
+        "y": 290,
+        "wires": [
+            [
+                "7a509c12.800984"
+            ]
+        ]
+    },
+    {
+        "id": "336ee02c.af737",
+        "type": "debug",
+        "z": "f95c6e59.5c919",
+        "name": "pinDataJSON",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 570,
-        "y": 500,
+        "complete": "payload",
+        "x": 1140,
+        "y": 190,
         "wires": []
+    },
+    {
+        "id": "c66f7348.9254",
+        "type": "inject",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "387de805.cfe598"
+            ]
+        ]
+    },
+    {
+        "id": "1ee66b73.7e71c5",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "[ID]/pins",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1445,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4a86f18c.1419e",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D3o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[3]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[3]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 420,
+        "wires": [
+            [
+                "1d3520aa.3286cf"
+            ]
+        ]
+    },
+    {
+        "id": "68c38448.d45eac",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D5o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[5]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[5]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 526,
+        "wires": [
+            [
+                "5ee30c83.ec6a64"
+            ]
+        ]
+    },
+    {
+        "id": "1646a667.112c8a",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D6o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[6]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[6]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 580,
+        "wires": [
+            [
+                "9fb6dd05.c3ecc"
+            ]
+        ]
+    },
+    {
+        "id": "46996f37.99e7c",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D4o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[4]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[4]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 470,
+        "wires": [
+            [
+                "73f2ffba.d1f35"
+            ]
+        ]
+    },
+    {
+        "id": "4a078d98.65a104",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D7o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[7]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[7]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 630,
+        "wires": [
+            [
+                "122ddd45.68b293"
+            ]
+        ]
+    },
+    {
+        "id": "334d3120.db734e",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D8o",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[8]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "outEnabled[8]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 625,
+        "y": 680,
+        "wires": [
+            [
+                "b9394b1a.953098"
+            ]
+        ]
+    },
+    {
+        "id": "4e70b3e2.afe95c",
+        "type": "ui_text_input",
+        "z": "f95c6e59.5c919",
+        "name": "pinName",
+        "label": "pinName",
+        "group": "857ece11.192e7",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "1000",
+        "topic": "n",
+        "x": 360,
+        "y": 250,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "eef7d64d.013198",
+        "type": "mqtt in",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "adc",
+        "topic": "/HL/+/adc",
+        "qos": "2",
+        "broker": "a4bd0da.b2f13f",
+        "x": 1045,
+        "y": 730,
+        "wires": [
+            [
+                "b6c4092b.e20548"
+            ]
+        ]
+    },
+    {
+        "id": "3d7622cd.a1d2ce",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "[ID]/adc",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1435,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "b6c4092b.e20548",
+        "type": "json",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "adc",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1178,
+        "y": 730,
+        "wires": [
+            [
+                "3d7622cd.a1d2ce",
+                "b4212c07.83d91"
+            ]
+        ]
+    },
+    {
+        "id": "e82f4655.692d98",
+        "type": "ui_gauge",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Analog Data",
+        "group": "ae257199.19c84",
+        "order": 12,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Analog Data",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#29ee13"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1945,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a17d4562.4d50d8",
+        "type": "ui_chart",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Analog Data",
+        "group": "e9b37a71.d109a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Analog Data",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1785,
+        "y": 730,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b4212c07.83d91",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "adc",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.adc",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1425,
+        "y": 730,
+        "wires": [
+            [
+                "e82f4655.692d98",
+                "a17d4562.4d50d8"
+            ]
+        ]
+    },
+    {
+        "id": "9802e30e.022a9",
+        "type": "ui_button",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "Get ADC",
+        "group": "6bf64492.b29f0c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get ADC",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"cmd\":\"adc\"}",
+        "payloadType": "str",
+        "topic": "",
+        "x": 785,
+        "y": 890,
+        "wires": [
+            [
+                "b9b3f548.4fa638"
+            ]
+        ]
+    },
+    {
+        "id": "475a9c69.a38104",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "sample ADC",
+        "topic": "adc",
+        "payload": "{\"cmd\":\"adc\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "x": 775,
+        "y": 940,
+        "wires": [
+            [
+                "b9b3f548.4fa638"
+            ]
+        ]
+    },
+    {
+        "id": "82400b00.6543c8",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "cmd pwm \"pins_config\" ",
+        "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('main_pin')     || \"4\";\nvar duty =    flow.get('main_duty')    || 512;\nvar freq =    flow.get('main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n    \n\n}\nif (msg.topic === \"pwm\")  {\n    pinConfig.pwm  = msg.payload;\n    pinConfig.freq = freq;\n    pinConfig.duty = duty;\n    pwm_msg = {};\n    pwm_msg.payload = true\n}\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 785,
+        "y": 1070,
+        "wires": [
+            [
+                "a7f02cb8.d627b",
+                "69b4786b.2e89a8",
+                "367606af.56455a"
+            ],
+            [
+                "eded2d47.0ebce"
+            ]
+        ],
+        "outputLabels": [
+            "cmd",
+            "pwm"
+        ]
+    },
+    {
+        "id": "a7f02cb8.d627b",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pinDataJSON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1075,
+        "y": 1070,
+        "wires": []
+    },
+    {
+        "id": "52e52c77.dcab24",
+        "type": "ui_dropdown",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pin #",
+        "label": "pin #",
+        "place": "?",
+        "group": "f78522d2.3c171",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "options": [
+            {
+                "label": "N/A",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "0",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "main_pin",
+        "x": 525,
+        "y": 1020,
+        "wires": [
+            [
+                "72fb8bf2.eae094"
+            ]
+        ]
+    },
+    {
+        "id": "e37fae90.ddea4",
+        "type": "ui_button",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pwm controls",
+        "group": "f78522d2.3c171",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "pwm controls",
+        "color": "SkyBlue",
+        "bgcolor": "SlateGray",
+        "icon": "rick_admin",
+        "payload": "{\"cmd\":\"pwm\",\"pin\":@}",
+        "payloadType": "str",
+        "topic": "",
+        "x": 540,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab0e57c5.e7d9c8",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pin 4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1020,
+        "wires": [
+            [
+                "52e52c77.dcab24",
+                "6e463ed5.07898"
+            ]
+        ]
+    },
+    {
+        "id": "6ebf74a.e659b8c",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.3",
+        "x": 235,
+        "y": 1020,
+        "wires": [
+            [
+                "ab0e57c5.e7d9c8"
+            ]
+        ]
+    },
+    {
+        "id": "258ab0e3.f907",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "insert pin#",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "@",
+                "fromt": "str",
+                "to": "main_pin",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 1220,
+        "wires": [
+            [
+                "9be542e5.91192"
+            ]
+        ]
+    },
+    {
+        "id": "48fed05c.2faff",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "cmd \"pwm\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"pwm\",\"pin\":\"@\"}",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1220,
+        "wires": [
+            [
+                "258ab0e3.f907"
+            ]
+        ]
+    },
+    {
+        "id": "eded2d47.0ebce",
+        "type": "delay",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 430,
+        "y": 1220,
+        "wires": [
+            [
+                "48fed05c.2faff"
+            ]
+        ]
+    },
+    {
+        "id": "6f8e3d82.ab3644",
+        "type": "delay",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 760,
+        "y": 410,
+        "wires": [
+            [
+                "3bc3d7cc.b5a188"
+            ]
+        ]
+    },
+    {
+        "id": "3bc3d7cc.b5a188",
+        "type": "change",
+        "z": "f95c6e59.5c919",
+        "name": "cmd \"pwm\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"pwm\",\"pin\":\"@\"}",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 410,
+        "wires": [
+            [
+                "695e9cd5.6736c4"
+            ]
+        ]
+    },
+    {
+        "id": "695e9cd5.6736c4",
+        "type": "change",
+        "z": "f95c6e59.5c919",
+        "name": "insert pin #",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "@",
+                "fromt": "str",
+                "to": "pin",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 410,
+        "wires": [
+            [
+                "609e2d4e.0e0ff4"
+            ]
+        ]
+    },
+    {
+        "id": "360676e2.1fbe2a",
+        "type": "link out",
+        "z": "f95c6e59.5c919",
+        "name": "pinConfig",
+        "links": [
+            "d1135c0.509fea8",
+            "127f916c.9f0cdf"
+        ],
+        "x": 1105,
+        "y": 150,
+        "wires": []
+    },
+    {
+        "id": "9be542e5.91192",
+        "type": "json",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 920,
+        "y": 1220,
+        "wires": [
+            [
+                "a7f02cb8.d627b",
+                "69b4786b.2e89a8"
+            ]
+        ]
+    },
+    {
+        "id": "291243aa.e327ec",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "test pwm",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 240,
+        "y": 1220,
+        "wires": [
+            [
+                "eded2d47.0ebce"
+            ]
+        ]
+    },
+    {
+        "id": "609e2d4e.0e0ff4",
+        "type": "json",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1240,
+        "y": 410,
+        "wires": [
+            [
+                "336ee02c.af737"
+            ]
+        ]
+    },
+    {
+        "id": "1c5b14d7.aca34b",
+        "type": "inject",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "6f8e3d82.ab3644"
+            ]
+        ]
+    },
+    {
+        "id": "69b4786b.2e89a8",
+        "type": "link out",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pinConfig",
+        "links": [
+            "d1135c0.509fea8"
+        ],
+        "x": 1185,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "720b75ed.b5aa1c",
+        "type": "ui_text_input",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pinName",
+        "label": "pinName",
+        "group": "f78522d2.3c171",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "1000",
+        "topic": "pwm_n",
+        "x": 530,
+        "y": 980,
+        "wires": [
+            [
+                "82400b00.6543c8"
+            ]
+        ]
+    },
+    {
+        "id": "72fb8bf2.eae094",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "save param",
+        "func": "flow.set(msg.topic,msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 735,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb21a171.8ce88",
+        "type": "function",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "loadPinLabels",
+        "func": "var mynodeId = global.get('activeNodeId') || \"initial\";\nvar activeNode = global.get('k9-nodes-pins') ||\"initial\";\n//activeNode = 'initial';\nflow.set('tmp.activeNode',activeNode);\nvar activeNodePins = activeNode[mynodeId] || \"initial\" ;\n//activeNodePins = 'initial';\nflow.set('tmp.activeNodePins',activeNodePins)\nvar nodePinsLbl = [];\nvar nodeOutEnable = [];\nvar nodeInEnable = [];\nvar defaultLabel;\nvar label,pin,ipin,mode;\n\nnode.status({text:\"node | \" + mynodeId});\n\nfor (i = 0; i <= 8; i++ ) {\n    pin = i.toString();\n    defaultLabel = \"D\"+i;\n    label = \"Dx\"+ i;\n    nodePinsLbl[i] = label;\n    nodeOutEnable[i] = false;\n    nodeInEnable[i] = false;\n    if (activeNodePins !== \"initial\") {\n    \n            ipin = \"??\";\n            flow.set('tmp.ipin',ipin)\n        if (typeof activeNodePins.pins !== undefined && typeof activeNodePins.pins[pin] !== undefined)  {\n            ipin = activeNodePins.pins[pin];\n            //nodePinsLbl[i] = ipin ;\n        }\n    \n        if (typeof ipin !== undefined && typeof ipin.n === 'string') {\n                if (ipin.n !== null) nodePinsLbl[i] = ipin.n;\n        }\n        if (typeof ipin !== undefined && typeof ipin.m === 'number') {\n                mode = ipin.m\n                if (mode === 1 || mode === 3) nodeOutEnable[i] = true;\n                if (mode === 0 || mode === 2) nodeInEnable[i] = true;\n        }\n    }\n\n}\n\nmsg.outEnabled = nodeOutEnable;\nmsg.inEnabled = nodeInEnable;\nmsg.payload =  nodePinsLbl;\n//msg.payload =  activeNodePins;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "d34cc621.6c9f38",
+                "d7c9135b.18fa7",
+                "4a86f18c.1419e",
+                "46996f37.99e7c",
+                "68c38448.d45eac",
+                "1646a667.112c8a",
+                "4a078d98.65a104",
+                "334d3120.db734e",
+                "59ec3df4.f26e04",
+                "39e654b2.f5b51c",
+                "3e7f72f.f9d388e"
+            ]
+        ]
+    },
+    {
+        "id": "d34cc621.6c9f38",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "loadPinLabels",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 340,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "317c9f68.cc301",
+        "type": "inject",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "onBoot",
+        "topic": "onboot",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 300,
+        "y": 450,
+        "wires": [
+            [
+                "cb21a171.8ce88"
+            ]
+        ]
+    },
+    {
+        "id": "898c6775.b367a8",
+        "type": "link out",
+        "z": "cae895a0.8ab828",
+        "name": "updateActiveNodeId",
+        "links": [
+            "22bdcf95.22c49"
+        ],
+        "x": 1720,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "22bdcf95.22c49",
+        "type": "link in",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "updatePinLabels",
+        "links": [
+            "6704f6b9.878ab8",
+            "898c6775.b367a8"
+        ],
+        "x": 245,
+        "y": 520,
+        "wires": [
+            [
+                "cb21a171.8ce88"
+            ]
+        ]
+    },
+    {
+        "id": "6704f6b9.878ab8",
+        "type": "link out",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "newPinConfig",
+        "links": [
+            "22bdcf95.22c49"
+        ],
+        "x": 2055,
+        "y": 650,
+        "wires": []
+    },
+    {
+        "id": "1eb631d4.2ebcbe",
+        "type": "delay",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1930,
+        "y": 650,
+        "wires": [
+            [
+                "6704f6b9.878ab8"
+            ]
+        ]
+    },
+    {
+        "id": "367606af.56455a",
+        "type": "delay",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 940,
+        "y": 1020,
+        "wires": [
+            [
+                "1fe4c652.83ec9a"
+            ]
+        ]
+    },
+    {
+        "id": "1fe4c652.83ec9a",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"pins\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 1020,
+        "wires": [
+            [
+                "69b4786b.2e89a8"
+            ]
+        ]
+    },
+    {
+        "id": "127f916c.9f0cdf",
+        "type": "link in",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pinInputLabels",
+        "links": [
+            "360676e2.1fbe2a",
+            "59ec3df4.f26e04"
+        ],
+        "x": 1465,
+        "y": 1160,
+        "wires": [
+            [
+                "852ce96f.22d158",
+                "ee510517.a50df8",
+                "3d0f4a7f.7681d6",
+                "188159ac.e1b356",
+                "2b09a59.bf5355a",
+                "e6c5630a.b48e6",
+                "f327e4a8.97d5c8"
+            ]
+        ]
+    },
+    {
+        "id": "59ec3df4.f26e04",
+        "type": "link out",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "loadPinLabels",
+        "links": [
+            "127f916c.9f0cdf"
+        ],
+        "x": 465,
+        "y": 630,
+        "wires": []
+    },
+    {
+        "id": "39e654b2.f5b51c",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "enableOutPinLabels",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "outEnabled",
+        "x": 361.9233093261719,
+        "y": 732.3693237304688,
+        "wires": []
+    },
+    {
+        "id": "3e7f72f.f9d388e",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "enableInPinLabels",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "inEnabled",
+        "x": 350,
+        "y": 669,
+        "wires": []
+    },
+    {
+        "id": "e98d6dbe.f8f36",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1095,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25fcb0d7.b3e2",
+        "type": "comment",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "generate Pin Lables and Display",
+        "info": "",
+        "x": 350,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "6e463ed5.07898",
+        "type": "link out",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "onBoot selP4",
+        "links": [
+            "8c760a40.3a9218"
+        ],
+        "x": 485,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8c760a40.3a9218",
+        "type": "link in",
+        "z": "f95c6e59.5c919",
+        "name": "selPinOnPinconfig",
+        "links": [
+            "6e463ed5.07898"
+        ],
+        "x": 235,
+        "y": 190,
+        "wires": [
+            [
+                "9e9bfcf1.ec0c4"
+            ]
+        ]
     }
 ]
