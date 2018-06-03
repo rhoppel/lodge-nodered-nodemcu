@@ -9,14 +9,14 @@
     {
         "id": "cae895a0.8ab828",
         "type": "tab",
-        "label": "Update TARDIS DB",
+        "label": "Update Node DB",
         "disabled": false,
         "info": ""
     },
     {
         "id": "f95c6e59.5c919",
         "type": "tab",
-        "label": "Pin Configurations",
+        "label": "Configuration",
         "disabled": false,
         "info": ""
     },
@@ -271,7 +271,7 @@
         "id": "3a8dcbb7.653aa4",
         "type": "ui_tab",
         "z": "",
-        "name": "Message",
+        "name": "Message Node",
         "icon": "dashboard",
         "order": 3
     },
@@ -317,7 +317,7 @@
         "id": "f095d7f0.6182d8",
         "type": "ui_tab",
         "z": "",
-        "name": "Configure",
+        "name": "Configure Node",
         "icon": "dashboard",
         "order": 2
     },
@@ -329,7 +329,7 @@
         "tab": "f095d7f0.6182d8",
         "order": 1,
         "disp": true,
-        "width": "4",
+        "width": "6",
         "collapse": false
     },
     {
@@ -350,12 +350,12 @@
         "compatmode": true,
         "keepalive": "60",
         "cleansession": true,
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
         "birthTopic": "",
         "birthQos": "0",
-        "birthPayload": ""
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
     },
     {
         "id": "409910e3.3cf0d",
@@ -419,6 +419,28 @@
         "disp": true,
         "width": "3",
         "collapse": false
+    },
+    {
+        "id": "c47d7f0.070078",
+        "type": "ui_group",
+        "z": "",
+        "name": "fileOp",
+        "tab": "f095d7f0.6182d8",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "a14dfcff.d0a7e",
+        "type": "ui_group",
+        "z": "",
+        "name": "File Payload",
+        "tab": "f095d7f0.6182d8",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": true
     },
     {
         "id": "110362ba.b083ad",
@@ -533,7 +555,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "HL/register",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -708,7 +730,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "group": "ae257199.19c84",
-        "order": 9,
+        "order": 10,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -734,7 +756,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "",
         "group": "ae257199.19c84",
-        "order": 12,
+        "order": 13,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -787,7 +809,7 @@
         "name": "t_cal",
         "label": "",
         "group": "ae257199.19c84",
-        "order": 11,
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -830,8 +852,7 @@
         "y": 470,
         "wires": [
             [
-                "b9b3f548.4fa638",
-                "e98d6dbe.f8f36"
+                "b9b3f548.4fa638"
             ]
         ]
     },
@@ -861,8 +882,7 @@
         "y": 373.00016593933105,
         "wires": [
             [
-                "b9b3f548.4fa638",
-                "e98d6dbe.f8f36"
+                "b9b3f548.4fa638"
             ]
         ]
     },
@@ -937,8 +957,7 @@
         "y": 630,
         "wires": [
             [
-                "b9b3f548.4fa638",
-                "e98d6dbe.f8f36"
+                "b9b3f548.4fa638"
             ]
         ]
     },
@@ -968,8 +987,7 @@
         "y": 680,
         "wires": [
             [
-                "b9b3f548.4fa638",
-                "e98d6dbe.f8f36"
+                "b9b3f548.4fa638"
             ]
         ]
     },
@@ -1018,21 +1036,21 @@
             ],
             [
                 "729e7ea5.64ed7",
-                "ee510517.a50df8"
+                "5793920d.4a685c"
             ],
             [
                 "1fb46fa0.eb6c7",
-                "188159ac.e1b356"
+                "c2d9be1f.c6c34"
             ],
             [
                 "d6a5ce23.3bef8",
-                "2b09a59.bf5355a"
+                "e33aecce.1d764"
             ],
             [
-                "e6c5630a.b48e6"
+                "c55f87e9.0f9af8"
             ],
             [
-                "f327e4a8.97d5c8"
+                "827e961a.e53b58"
             ]
         ],
         "outputLabels": [
@@ -1236,18 +1254,6 @@
         "info": "",
         "x": 770,
         "y": 130,
-        "wires": []
-    },
-    {
-        "id": "5d74104.feb73f",
-        "type": "ui_audio",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "speech",
-        "group": "ae257199.19c84",
-        "voice": "en-GB",
-        "always": "",
-        "x": 1890,
-        "y": 860,
         "wires": []
     },
     {
@@ -2183,7 +2189,7 @@
         "name": "Message to Node Screen",
         "label": "Message to Node Screen",
         "group": "b5372e87.bef79",
-        "order": 6,
+        "order": 5,
         "width": "0",
         "height": "0",
         "options": [
@@ -2257,8 +2263,8 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "rename Node",
         "label": "rename Node",
-        "group": "b5372e87.bef79",
-        "order": 4,
+        "group": "857ece11.192e7",
+        "order": 3,
         "width": "0",
         "height": "0",
         "options": [
@@ -2304,7 +2310,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "Clear Message",
         "group": "b5372e87.bef79",
-        "order": 5,
+        "order": 4,
         "width": "0",
         "height": "0",
         "passthru": false,
@@ -2445,7 +2451,9 @@
             "48c18a00.134cf8",
             "77b89909.4c1b68",
             "360676e2.1fbe2a",
-            "69b4786b.2e89a8"
+            "69b4786b.2e89a8",
+            "5d4eafcd.f20ef",
+            "1adc8ca4.4ecc43"
         ],
         "x": 910,
         "y": 120,
@@ -2949,7 +2957,7 @@
         "label": "pin #",
         "place": "pin # ???",
         "group": "857ece11.192e7",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3006,7 +3014,7 @@
             }
         ],
         "payload": "",
-        "topic": "pin",
+        "topic": "pin.pin",
         "x": 370,
         "y": 190,
         "wires": [
@@ -3023,7 +3031,7 @@
         "label": "value",
         "place": "LOW/HIGH ???",
         "group": "857ece11.192e7",
-        "order": 8,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3040,7 +3048,7 @@
             }
         ],
         "payload": "",
-        "topic": "w",
+        "topic": "pin.w",
         "x": 370,
         "y": 400,
         "wires": [
@@ -3110,7 +3118,7 @@
         "label": "mode",
         "place": "INPUT/OUTPUT/INT/OPENDRAIN ???",
         "group": "857ece11.192e7",
-        "order": 7,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3137,7 +3145,7 @@
             }
         ],
         "payload": "",
-        "topic": "m",
+        "topic": "pin.m",
         "x": 370,
         "y": 300,
         "wires": [
@@ -3154,7 +3162,7 @@
         "label": "pullup",
         "place": "select pullup? [default  true]",
         "group": "857ece11.192e7",
-        "order": 9,
+        "order": 10,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3171,7 +3179,7 @@
             }
         ],
         "payload": "",
-        "topic": "pu",
+        "topic": "pin.pu",
         "x": 370,
         "y": 350,
         "wires": [
@@ -3188,7 +3196,7 @@
         "label": "pwm",
         "place": "select pwm?",
         "group": "857ece11.192e7",
-        "order": 11,
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3210,7 +3218,7 @@
             }
         ],
         "payload": "",
-        "topic": "pwm",
+        "topic": "pin.pwm",
         "x": 370,
         "y": 500,
         "wires": [
@@ -3224,15 +3232,15 @@
         "id": "781ad120.aee6c",
         "type": "ui_switch",
         "z": "e0c6f6b6.0d5c68",
-        "name": "enable pwm",
-        "label": "enable pwm",
+        "name": "pwm enable",
+        "label": "pwm enable",
         "group": "f78522d2.3c171",
-        "order": 11,
+        "order": 12,
         "width": "0",
         "height": "0",
         "passthru": false,
         "decouple": "false",
-        "topic": "pwm",
+        "topic": "pin.pwm",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -3257,11 +3265,11 @@
         "name": "duty cycle",
         "label": "",
         "group": "f78522d2.3c171",
-        "order": 12,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "topic": "main_duty",
+        "topic": "pin.main_duty",
         "min": "0",
         "max": "1023",
         "step": "1",
@@ -3281,11 +3289,11 @@
         "name": "frequency",
         "label": "",
         "group": "f78522d2.3c171",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "topic": "main_freq",
+        "topic": "pin.main_freq",
         "min": "0",
         "max": "1000",
         "step": "1",
@@ -3303,7 +3311,7 @@
         "type": "ui_text",
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
-        "order": 10,
+        "order": 11,
         "width": 0,
         "height": 0,
         "name": "t_cal display",
@@ -3321,14 +3329,14 @@
         "name": "duty cycle",
         "label": "",
         "group": "857ece11.192e7",
-        "order": 12,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "topic": "duty",
+        "topic": "pin.duty",
         "min": "0",
         "max": "1024",
-        "step": "32",
+        "step": "1",
         "x": 360,
         "y": 550,
         "wires": [
@@ -3346,14 +3354,14 @@
         "name": "frequency",
         "label": "",
         "group": "857ece11.192e7",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "topic": "freq",
+        "topic": "pin.freq",
         "min": "0",
         "max": "1000",
-        "step": "50",
+        "step": "1",
         "x": 360,
         "y": 600,
         "wires": [
@@ -3369,15 +3377,15 @@
         "type": "ui_text",
         "z": "f95c6e59.5c919",
         "group": "857ece11.192e7",
-        "order": 15,
+        "order": 16,
         "width": 0,
         "height": 0,
         "name": "frequency display",
         "label": "frequency",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 610,
-        "y": 600,
+        "x": 646,
+        "y": 599.0000505447388,
         "wires": []
     },
     {
@@ -3385,15 +3393,15 @@
         "type": "ui_text",
         "z": "f95c6e59.5c919",
         "group": "857ece11.192e7",
-        "order": 13,
+        "order": 14,
         "width": 0,
         "height": 0,
         "name": "duty cycle display",
         "label": "duty cycle",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 610,
-        "y": 550,
+        "x": 653,
+        "y": 551.0000476837158,
         "wires": []
     },
     {
@@ -3418,7 +3426,7 @@
         "label": "trigger",
         "place": "select type of trigger",
         "group": "857ece11.192e7",
-        "order": 10,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3455,7 +3463,7 @@
             }
         ],
         "payload": "",
-        "topic": "t",
+        "topic": "pin.t",
         "x": 370,
         "y": 450,
         "wires": [
@@ -3731,7 +3739,7 @@
         "z": "cae895a0.8ab828",
         "group": "857ece11.192e7",
         "name": "node selection Config",
-        "order": 3,
+        "order": 5,
         "width": "0",
         "height": "0",
         "format": "<div>\n    <span style=\"color:LightBlue\">\n    <h3 align = center>{{msg.payload}}</h3>\n    </span>\n</div>",
@@ -4034,7 +4042,7 @@
         "type": "function",
         "z": "cae895a0.8ab828",
         "name": "k9-nodes",
-        "func": "var local = global.get('k9-nodes');\nmsg.payload = [msg.payload,local[msg.payload]];\n\nreturn msg;",
+        "func": "var local = global.get('k9-nodes') || {};\nmsg.payload = [msg.payload,local[msg.payload]];\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1930,
@@ -4050,7 +4058,7 @@
         "type": "function",
         "z": "cae895a0.8ab828",
         "name": "k9-nodes-pins",
-        "func": "var local = global.get('k9-nodes-pins');\nmsg.id = msg.payload\nmsg.payload = local[msg.payload];\n\n\nreturn msg;",
+        "func": "var local = global.get('k9-nodes-pins') || {};\nmsg.id = msg.payload\nmsg.payload = local[msg.payload];\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1950,
@@ -4058,7 +4066,8 @@
         "wires": [
             [
                 "db2c0ae4.29bfe8",
-                "f19aeb27.19c838"
+                "f19aeb27.19c838",
+                "9f14a0e6.02039"
             ]
         ]
     },
@@ -4157,7 +4166,7 @@
         "type": "ui_text",
         "z": "e0c6f6b6.0d5c68",
         "group": "f78522d2.3c171",
-        "order": 15,
+        "order": 16,
         "width": 0,
         "height": 0,
         "name": "frequency display",
@@ -4173,7 +4182,7 @@
         "type": "ui_text",
         "z": "e0c6f6b6.0d5c68",
         "group": "f78522d2.3c171",
-        "order": 13,
+        "order": 14,
         "width": 0,
         "height": 0,
         "name": "duty cycle display",
@@ -4197,8 +4206,8 @@
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 650,
-        "y": 1270,
+        "x": 673,
+        "y": 1301,
         "wires": [
             []
         ]
@@ -4215,8 +4224,8 @@
         "crontab": "",
         "once": true,
         "onceDelay": "3",
-        "x": 285,
-        "y": 1270,
+        "x": 308,
+        "y": 1301,
         "wires": [
             [
                 "452e3811.0c3668"
@@ -4232,8 +4241,8 @@
         "high": "10",
         "inte": "true",
         "property": "payload",
-        "x": 495,
-        "y": 1270,
+        "x": 518,
+        "y": 1301,
         "wires": [
             [
                 "a80a98f7.2e0478"
@@ -4429,8 +4438,8 @@
         "func": "var mynode   = msg.topic.split(\"/\") || \"error\";\nmynode = mynode[2]\n\nnode.status({text:\"node | \" + mynode});\n\nvar msg1 = { payload:msg.payload.ipins[\"3\"] };\nvar msg2 = { payload:msg.payload.ipins[\"5\"] };\nvar msg3 = { payload:msg.payload.ipins[\"6\"] };\n\nreturn [msg1, msg2, msg3 ];\n",
         "outputs": 3,
         "noerr": 0,
-        "x": 1890,
-        "y": 800,
+        "x": 1893.9999656677246,
+        "y": 893.0000820159912,
         "wires": [
             [],
             [],
@@ -4698,7 +4707,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D3 Input",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4717,7 +4726,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D5 Input",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4736,7 +4745,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D6 Input",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0)  === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4750,80 +4759,12 @@
         ]
     },
     {
-        "id": "ee510517.a50df8",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D3i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[3]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[3]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1007,
-        "wires": [
-            [
-                "1b33a599.c820ba"
-            ]
-        ]
-    },
-    {
-        "id": "188159ac.e1b356",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D5i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[5]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[5]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1067,
-        "wires": [
-            [
-                "5c83d490.3328bc"
-            ]
-        ]
-    },
-    {
         "id": "65e96fe1.8cbbf",
         "type": "ui_template",
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D0 Input",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0)  === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0)  === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4842,7 +4783,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D7 Input",
-        "order": 6,
+        "order": 7,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4861,7 +4802,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D8 Input",
-        "order": 7,
+        "order": 8,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -4875,108 +4816,6 @@
         ]
     },
     {
-        "id": "2b09a59.bf5355a",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D6i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[6]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[6]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1097,
-        "wires": [
-            [
-                "703bf0e3.2cf42"
-            ]
-        ]
-    },
-    {
-        "id": "e6c5630a.b48e6",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D7i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[7]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[7]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1127,
-        "wires": [
-            [
-                "1800d512.2f0bfb"
-            ]
-        ]
-    },
-    {
-        "id": "f327e4a8.97d5c8",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D8i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[8]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[8]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1157,
-        "wires": [
-            [
-                "3008250d.ebd0da"
-            ]
-        ]
-    },
-    {
         "id": "852ce96f.22d158",
         "type": "change",
         "z": "e0c6f6b6.0d5c68",
@@ -4986,15 +4825,15 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "payload[0]",
-                "tot": "msg"
+                "to": "pinLbl[0]",
+                "tot": "flow"
             },
             {
                 "t": "set",
                 "p": "enabled",
                 "pt": "msg",
-                "to": "inEnabled[0]",
-                "tot": "msg"
+                "to": "inEnbl[0]",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -5035,7 +4874,7 @@
         "z": "e0c6f6b6.0d5c68",
         "group": "ae257199.19c84",
         "name": "D4 Input",
-        "order": 8,
+        "order": 9,
         "width": 0,
         "height": 0,
         "format": "<div layout=\"row\" layout-align=\"space-between\" >\n<p>{{msg.topic}}</p>\n<b>\n<p ng-style=\"{color: (msg.payload || 0) === 0 ? 'red' : 'lime'}\">\n  {{(msg.payload || 0) === 0 ? 'Low' : 'High'}}\n</p>\n</b>\n</div>",
@@ -5049,40 +4888,6 @@
         ]
     },
     {
-        "id": "3d0f4a7f.7681d6",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "D4i",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload[4]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "inEnabled[4]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1037,
-        "wires": [
-            [
-                "987405ef.c3c3b8"
-            ]
-        ]
-    },
-    {
         "id": "fef53a66.051ce8",
         "type": "function",
         "z": "f95c6e59.5c919",
@@ -5093,9 +4898,7 @@
         "x": 600,
         "y": 190,
         "wires": [
-            [
-                "387de805.cfe598"
-            ]
+            []
         ]
     },
     {
@@ -5115,8 +4918,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "store",
-        "x": 350,
-        "y": 100,
+        "x": 349.0000457763672,
+        "y": 135.0000057220459,
         "wires": [
             [
                 "387de805.cfe598"
@@ -5128,11 +4931,11 @@
         "type": "function",
         "z": "f95c6e59.5c919",
         "name": "create cmd \"pins_config\"",
-        "func": "var pin       = flow.get('pin')  || \"4\";\nvar name      = flow.get('n')    || \"\";\nvar m         = flow.get('m')    || 1;\nvar pu        = flow.get('pu')   || 1;\nvar w         = flow.get('w')    || 1 ;\nvar t         = flow.get('t')    || 5;\nvar pwm       = flow.get('pwm')  || \"\";\nvar duty      = flow.get('duty') || 512;\nvar freq      = flow.get('freq') || 500;\n\nvar mode      = m;\nvar pinConfig = {};\nvar pinObject = {};\n\nswitch (mode) {\n    case 0:\n        if (t === 5) pinConfig = {m,pu};\n        else pinConfig = {m,pu,t};\n        break;\n    case 1:\n        if (pwm === \"\") pinConfig = {m,w};\n        else  pinConfig = {m,w,pwm,duty,freq};\n        break;\n    case 2:\n        pinConfig = {};\n        break;\n    case 3:\n        pinConfig = {};\n        break;\n}\nif ( name !== \"\") pinConfig.n = name //add pin Name if it is not blank\n\npinObject[pin] = pinConfig;\n\nmsg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject}\n\nreturn msg;",
+        "func": "var pin       = flow.get('pin.pin')  || \"4\";\nvar name      = flow.get('pin.n')    || \"\";\nvar m         = flow.get('pin.m')    || 1;\nvar pu        = flow.get('pin.pu')   || 1;\nvar w         = flow.get('pin.w')    || 1 ;\nvar t         = flow.get('pin.t')    || 5;\nvar pwm       = flow.get('pin.pwm')  || \"\";\nvar duty      = flow.get('pin.duty') || 512;\nvar freq      = flow.get('pin.freq') || 500;\n\nvar mode      = m;\nvar pinConfig = {};\nvar pinObject = {};\n\nswitch (mode) {\n    case 0:\n        if (t === 5) pinConfig = {m,pu};\n        else pinConfig = {m,pu,t};\n        break;\n    case 1:\n        if (pwm === \"\") pinConfig = {m,w};\n        else  pinConfig = {m,w,pwm,duty,freq};\n        break;\n    case 2:\n        pinConfig = {};\n        break;\n    case 3:\n        pinConfig = {};\n        break;\n}\nif ( name !== \"\") pinConfig.n = name //add pin Name if it is not blank\n\npinObject[pin] = pinConfig;\n\nmsg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 880,
-        "y": 190,
+        "x": 646.9999961853027,
+        "y": 136.00003719329834,
         "wires": [
             [
                 "336ee02c.af737",
@@ -5145,7 +4948,7 @@
         "type": "function",
         "z": "f95c6e59.5c919",
         "name": "Clear Pin data",
-        "func": "flow.set('pin',  null);\nflow.set('n',  null);\nflow.set('m', null);\nflow.set('pu',   null);\nflow.set('w',    null);\nflow.set('t',    null);\nflow.set('pwm',  null);\nflow.set('duty', null);\nflow.set('freq', null);\n\nreturn msg;",
+        "func": "flow.set('pin.pin',  null);\nflow.set('pin.n',  null);\nflow.set('pin.m', null);\nflow.set('pin.pu',   null);\nflow.set('pin.w',    null);\nflow.set('pin.t',    null);\nflow.set('pin.pwm',  null);\nflow.set('pin.duty', null);\nflow.set('pin.freq', null);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 920,
@@ -5170,7 +4973,8 @@
         "y": 290,
         "wires": [
             [
-                "7a509c12.800984"
+                "7a509c12.800984",
+                "f4d096d8.635468"
             ]
         ]
     },
@@ -5179,13 +4983,13 @@
         "type": "debug",
         "z": "f95c6e59.5c919",
         "name": "pinDataJSON",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 1140,
-        "y": 190,
+        "x": 1384.9999771118164,
+        "y": 137.0000400543213,
         "wires": []
     },
     {
@@ -5200,8 +5004,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 680,
-        "y": 100,
+        "x": 367.00003814697266,
+        "y": 86.00000381469727,
         "wires": [
             [
                 "387de805.cfe598"
@@ -5213,7 +5017,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "[ID]/pins",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -5433,13 +5237,13 @@
         "name": "pinName",
         "label": "pinName",
         "group": "857ece11.192e7",
-        "order": 6,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
         "mode": "text",
         "delay": "1000",
-        "topic": "n",
+        "topic": "pin.n",
         "x": 360,
         "y": 250,
         "wires": [
@@ -5469,7 +5273,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "[ID]/adc",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -5501,7 +5305,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "Analog Data",
         "group": "ae257199.19c84",
-        "order": 12,
+        "order": 14,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -5509,7 +5313,7 @@
         "label": "units",
         "format": "{{value}}",
         "min": 0,
-        "max": "1",
+        "max": "1024",
         "colors": [
             "#ff0000",
             "#e6e600",
@@ -5641,7 +5445,7 @@
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
         "name": "cmd pwm \"pins_config\" ",
-        "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('main_pin')     || \"4\";\nvar duty =    flow.get('main_duty')    || 512;\nvar freq =    flow.get('main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n    \n\n}\nif (msg.topic === \"pwm\")  {\n    pinConfig.pwm  = msg.payload;\n    pinConfig.freq = freq;\n    pinConfig.duty = duty;\n    pwm_msg = {};\n    pwm_msg.payload = true\n}\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
+        "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('pin.main_pin')     || \"4\";\nvar duty =    flow.get('pin.main_duty')    || 512;\nvar freq =    flow.get('pin.main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n}\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
         "outputs": 2,
         "noerr": 0,
         "x": 785,
@@ -5652,9 +5456,7 @@
                 "69b4786b.2e89a8",
                 "367606af.56455a"
             ],
-            [
-                "eded2d47.0ebce"
-            ]
+            []
         ],
         "outputLabels": [
             "cmd",
@@ -5666,7 +5468,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "pinDataJSON",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -5740,7 +5542,7 @@
             }
         ],
         "payload": "",
-        "topic": "main_pin",
+        "topic": "pin.main_pin",
         "x": 525,
         "y": 1020,
         "wires": [
@@ -5762,12 +5564,12 @@
         "label": "pwm controls",
         "color": "SkyBlue",
         "bgcolor": "SlateGray",
-        "icon": "rick_admin",
+        "icon": "",
         "payload": "{\"cmd\":\"pwm\",\"pin\":@}",
         "payloadType": "str",
         "topic": "",
-        "x": 540,
-        "y": 940,
+        "x": 251.9999771118164,
+        "y": 975.9999847412109,
         "wires": [
             []
         ]
@@ -5832,7 +5634,7 @@
                 "pt": "msg",
                 "from": "@",
                 "fromt": "str",
-                "to": "main_pin",
+                "to": "pin.main_pin",
                 "tot": "flow"
             }
         ],
@@ -5845,57 +5647,8 @@
         "y": 1220,
         "wires": [
             [
-                "9be542e5.91192"
-            ]
-        ]
-    },
-    {
-        "id": "48fed05c.2faff",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "cmd \"pwm\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"cmd\":\"pwm\",\"pin\":\"@\"}",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 1220,
-        "wires": [
-            [
-                "258ab0e3.f907"
-            ]
-        ]
-    },
-    {
-        "id": "eded2d47.0ebce",
-        "type": "delay",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "20",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 430,
-        "y": 1220,
-        "wires": [
-            [
-                "48fed05c.2faff"
+                "a7f02cb8.d627b",
+                "69b4786b.2e89a8"
             ]
         ]
     },
@@ -5961,7 +5714,7 @@
                 "pt": "msg",
                 "from": "@",
                 "fromt": "str",
-                "to": "pin",
+                "to": "pin.pin",
                 "tot": "flow"
             }
         ],
@@ -5987,46 +5740,9 @@
             "d1135c0.509fea8",
             "127f916c.9f0cdf"
         ],
-        "x": 1105,
-        "y": 150,
+        "x": 826.0000162124634,
+        "y": 85.00001907348633,
         "wires": []
-    },
-    {
-        "id": "9be542e5.91192",
-        "type": "json",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 920,
-        "y": 1220,
-        "wires": [
-            [
-                "a7f02cb8.d627b",
-                "69b4786b.2e89a8"
-            ]
-        ]
-    },
-    {
-        "id": "291243aa.e327ec",
-        "type": "inject",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "test pwm",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 240,
-        "y": 1220,
-        "wires": [
-            [
-                "eded2d47.0ebce"
-            ]
-        ]
     },
     {
         "id": "609e2d4e.0e0ff4",
@@ -6090,8 +5806,8 @@
         "mode": "text",
         "delay": "1000",
         "topic": "pwm_n",
-        "x": 530,
-        "y": 980,
+        "x": 520.9999923706055,
+        "y": 971.9999828338623,
         "wires": [
             [
                 "82400b00.6543c8"
@@ -6106,8 +5822,8 @@
         "func": "flow.set(msg.topic,msg.payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 735,
-        "y": 1020,
+        "x": 745,
+        "y": 1020.0000038146973,
         "wires": [
             []
         ]
@@ -6117,7 +5833,7 @@
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
         "name": "loadPinLabels",
-        "func": "var mynodeId = global.get('activeNodeId') || \"initial\";\nvar activeNode = global.get('k9-nodes-pins') ||\"initial\";\n//activeNode = 'initial';\nflow.set('tmp.activeNode',activeNode);\nvar activeNodePins = activeNode[mynodeId] || \"initial\" ;\n//activeNodePins = 'initial';\nflow.set('tmp.activeNodePins',activeNodePins)\nvar nodePinsLbl = [];\nvar nodeOutEnable = [];\nvar nodeInEnable = [];\nvar defaultLabel;\nvar label,pin,ipin,mode;\n\nnode.status({text:\"node | \" + mynodeId});\n\nfor (i = 0; i <= 8; i++ ) {\n    pin = i.toString();\n    defaultLabel = \"D\"+i;\n    label = \"Dx\"+ i;\n    nodePinsLbl[i] = label;\n    nodeOutEnable[i] = false;\n    nodeInEnable[i] = false;\n    if (activeNodePins !== \"initial\") {\n    \n            ipin = \"??\";\n            flow.set('tmp.ipin',ipin)\n        if (typeof activeNodePins.pins !== undefined && typeof activeNodePins.pins[pin] !== undefined)  {\n            ipin = activeNodePins.pins[pin];\n            //nodePinsLbl[i] = ipin ;\n        }\n    \n        if (typeof ipin !== undefined && typeof ipin.n === 'string') {\n                if (ipin.n !== null) nodePinsLbl[i] = ipin.n;\n        }\n        if (typeof ipin !== undefined && typeof ipin.m === 'number') {\n                mode = ipin.m\n                if (mode === 1 || mode === 3) nodeOutEnable[i] = true;\n                if (mode === 0 || mode === 2) nodeInEnable[i] = true;\n        }\n    }\n\n}\n\nmsg.outEnabled = nodeOutEnable;\nmsg.inEnabled = nodeInEnable;\nmsg.payload =  nodePinsLbl;\n//msg.payload =  activeNodePins;\nreturn msg;",
+        "func": "var mynodeId = global.get('activeNodeId') || \"initial\";\nvar activeNode = global.get('k9-nodes-pins') ||\"initial\";\n//activeNode = 'initial';\nflow.set('tmp.activeNode',activeNode);\nvar activeNodePins = activeNode[mynodeId] || \"initial\" ;\n//activeNodePins = 'initial';\nflow.set('tmp.activeNodePins',activeNodePins)\nvar nodePinsLbl = [];\nvar nodeOutEnable = [];\nvar nodeInEnable = [];\nvar defaultLabel;\nvar label,pin,ipin,mode;\n\nnode.status({text:\"node | \" + mynodeId});\n\nfor (i = 0; i <= 8; i++ ) {\n    pin = i.toString();\n    defaultLabel = \"D\"+i;\n    label = \"Dx\"+ i;\n    nodePinsLbl[i] = label;\n    nodeOutEnable[i] = false;\n    nodeInEnable[i] = false;\n    if (activeNodePins !== \"initial\") {\n    \n            ipin = \"??\";\n            flow.set('tmp.ipin',ipin)\n        if (typeof activeNodePins.pins !== undefined && typeof activeNodePins.pins[pin] !== undefined)  {\n            ipin = activeNodePins.pins[pin];\n            //nodePinsLbl[i] = ipin ;\n        }\n    \n        if (typeof ipin !== undefined && typeof ipin.n === 'string') {\n                if (ipin.n !== null) nodePinsLbl[i] = ipin.n;\n        }\n        if (typeof ipin !== undefined && typeof ipin.m === 'number') {\n                mode = ipin.m\n                if (mode === 1 || mode === 3) nodeOutEnable[i] = true;\n                if (mode === 0 || mode === 2) nodeInEnable[i] = true;\n        }\n    }\n\n}\n\nflow.set('pinLbl',nodePinsLbl);\nflow.set('inEnbl',nodeInEnable);\nmsg.outEnabled = nodeOutEnable;\nmsg.inEnabled = nodeInEnable;\nmsg.payload =  nodePinsLbl;\n//msg.payload =  activeNodePins;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 370,
@@ -6143,7 +5859,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "loadPinLabels",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6180,8 +5896,8 @@
         "links": [
             "22bdcf95.22c49"
         ],
-        "x": 1720,
-        "y": 460,
+        "x": 1565,
+        "y": 420,
         "wires": []
     },
     {
@@ -6292,6 +6008,7 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "pinInputLabels",
         "links": [
+            "157d2eb8.569461",
             "360676e2.1fbe2a",
             "59ec3df4.f26e04"
         ],
@@ -6300,12 +6017,12 @@
         "wires": [
             [
                 "852ce96f.22d158",
-                "ee510517.a50df8",
-                "3d0f4a7f.7681d6",
-                "188159ac.e1b356",
-                "2b09a59.bf5355a",
-                "e6c5630a.b48e6",
-                "f327e4a8.97d5c8"
+                "5793920d.4a685c",
+                "ee28be1a.43281",
+                "c2d9be1f.c6c34",
+                "e33aecce.1d764",
+                "c55f87e9.0f9af8",
+                "827e961a.e53b58"
             ]
         ]
     },
@@ -6326,7 +6043,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "enableOutPinLabels",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6340,7 +6057,7 @@
         "type": "debug",
         "z": "e0c6f6b6.0d5c68",
         "name": "enableInPinLabels",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6348,31 +6065,6 @@
         "x": 350,
         "y": 669,
         "wires": []
-    },
-    {
-        "id": "e98d6dbe.f8f36",
-        "type": "change",
-        "z": "e0c6f6b6.0d5c68",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1095,
-        "y": 820,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "25fcb0d7.b3e2",
@@ -6390,10 +6082,11 @@
         "z": "e0c6f6b6.0d5c68",
         "name": "onBoot selP4",
         "links": [
-            "8c760a40.3a9218"
+            "8c760a40.3a9218",
+            "34bbd91.717ea26"
         ],
-        "x": 485,
-        "y": 900,
+        "x": 349.99999618530273,
+        "y": 1071.999924659729,
         "wires": []
     },
     {
@@ -6409,6 +6102,887 @@
         "wires": [
             [
                 "9e9bfcf1.ec0c4"
+            ]
+        ]
+    },
+    {
+        "id": "146c5a5f.e0aa16",
+        "type": "inject",
+        "z": "cae895a0.8ab828",
+        "name": "",
+        "topic": "on boot node selection",
+        "payload": "D1m_d0fbc3",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 1266.0000915527344,
+        "y": 464.00001430511475,
+        "wires": [
+            [
+                "3d09f36d.0d89cc"
+            ]
+        ]
+    },
+    {
+        "id": "26288d9e.f218c2",
+        "type": "mqtt in",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "files",
+        "topic": "/HL/+/files",
+        "qos": "2",
+        "broker": "a4bd0da.b2f13f",
+        "x": 1048.01953125,
+        "y": 791.50390625,
+        "wires": [
+            [
+                "e7061ca1.30c0f",
+                "1d67d012.4215e",
+                "d03e95e3.6c02c8",
+                "fad957c8.4947d8"
+            ]
+        ]
+    },
+    {
+        "id": "e7061ca1.30c0f",
+        "type": "debug",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "[ID]/files",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "x": 1420.0195274353027,
+        "y": 842.5038890838623,
+        "wires": []
+    },
+    {
+        "id": "d03e95e3.6c02c8",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "files",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": ",",
+                "fromt": "str",
+                "to": "\\n",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1428.01953125,
+        "y": 791.50390625,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33299840.409a28",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write Object",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"PINS\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 722.01953125,
+        "y": 580.00390625,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "95be5350.846dd",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Read",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"r\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 701.1446228027344,
+        "y": 644.1875896453857,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "5e656424.ac91cc",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write File",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"PINS\",\"f\":\"test.txt\",\"p\":\"payload\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 711.1445999145508,
+        "y": 610.937575340271,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "d728575d.fd7148",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Listing",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"l\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 701.1445579528809,
+        "y": 676.9374828338623,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "5d4eafcd.f20ef",
+        "type": "link out",
+        "z": "58ae81fe.fc8ae",
+        "name": "Test commands",
+        "links": [
+            "d1135c0.509fea8"
+        ],
+        "x": 932.01953125,
+        "y": 619.00390625,
+        "wires": []
+    },
+    {
+        "id": "471342ec.f6bacc",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Delete file",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"d\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 711.0142211914062,
+        "y": 708.8238525390625,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "1d67d012.4215e",
+        "type": "json",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 1181.8507919311523,
+        "y": 791.0104641914368,
+        "wires": [
+            [
+                "e7061ca1.30c0f"
+            ]
+        ]
+    },
+    {
+        "id": "c9febc84.818c7",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Read",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"r\",\"f\":\"dumpG.lua\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 721.017333984375,
+        "y": 806.4548950195312,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "4fafdf81.8cdda",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Read",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"r\",\"f\":\"test.txt\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 747.017333984375,
+        "y": 861.4548950195312,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "d40572d.403199",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write Object",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"D\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 711.017333984375,
+        "y": 542.232666015625,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "7eb812aa.e78dfc",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write Object",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"MQTT\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 707.017333984375,
+        "y": 507.2326354980469,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "83ae5f59.17876",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write Object",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"AP\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 675.017333984375,
+        "y": 473.2326354980469,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "6046bb96.9c7ae4",
+        "type": "inject",
+        "z": "58ae81fe.fc8ae",
+        "name": "test fileOp Write Object",
+        "topic": "",
+        "payload": "{\"cmd\":\"fileOp\",\"file\":{\"op\":\"w\",\"o\":\"TMR\",\"f\":\"test.json\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 688.0173034667969,
+        "y": 427.2326498031616,
+        "wires": [
+            [
+                "5d4eafcd.f20ef"
+            ]
+        ]
+    },
+    {
+        "id": "31852dc1.708402",
+        "type": "ui_text_input",
+        "z": "f95c6e59.5c919",
+        "name": "filename",
+        "label": "filename",
+        "group": "c47d7f0.070078",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "file.f",
+        "x": 357.0694580078125,
+        "y": 798.3231120109558,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "8447256f.ceba28",
+        "type": "ui_dropdown",
+        "z": "f95c6e59.5c919",
+        "name": "Object",
+        "label": "Object",
+        "place": "Select option",
+        "group": "c47d7f0.070078",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "D",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "PINS",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "MQTT",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "AP",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "TMR",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "file.o",
+        "x": 365.0694580078125,
+        "y": 744.4584856033325,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "e70e8931.5e1378",
+        "type": "ui_dropdown",
+        "z": "f95c6e59.5c919",
+        "name": "fileOp",
+        "label": "fileOp",
+        "place": "Select option",
+        "group": "c47d7f0.070078",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "options": [
+            {
+                "label": "write Object",
+                "value": "w",
+                "type": "str"
+            },
+            {
+                "label": "read",
+                "value": "r",
+                "type": "str"
+            },
+            {
+                "label": "list files",
+                "value": "l",
+                "type": "str"
+            },
+            {
+                "label": "delete",
+                "value": "d",
+                "type": "str"
+            },
+            {
+                "label": "write Payload",
+                "value": "wpl",
+                "type": "str"
+            },
+            {
+                "label": "rename file ",
+                "value": "ren",
+                "type": "str"
+            },
+            {
+                "label": "copy file to f2",
+                "value": "c",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "file.op",
+        "x": 366.07990646362305,
+        "y": 696.4654273986816,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "35e3cfe4.8959d",
+        "type": "ui_button",
+        "z": "f95c6e59.5c919",
+        "name": "fileSubmit",
+        "group": "c47d7f0.070078",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit fileOp",
+        "color": "Lime",
+        "bgcolor": "SlateGray",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 351.06950759887695,
+        "y": 968.7189965248108,
+        "wires": [
+            [
+                "c91d9edd.67a9c"
+            ]
+        ]
+    },
+    {
+        "id": "c91d9edd.67a9c",
+        "type": "function",
+        "z": "f95c6e59.5c919",
+        "name": "create cmd \"pins_config\"",
+        "func": "var f   = flow.get('file.f')    || \"\"; //filename\nvar f2  = flow.get('file.f2')   || \"tmp.txt\"; //file rename result\nvar o   = flow.get('file.o')    || \"\"; // Object\nvar op  = flow.get('file.op')   || \"\"; // operation\nvar pl  = flow.get('file.pl')   || \"\"; //payload\np = pl.text\n\n\nvar fileOp = {};\n\n\nswitch (op) {\n    case \"w\":\n        fileOp = {op,o,f};\n        break;\n    case \"wpl\":\n        op = \"w\"\n        fileOp = {op,f,p};\n        break;\n    case \"r\":\n        fileOp = {op,o,f};\n        break;\n    case \"l\":\n        fileOp = {op};\n        break;\n    case \"d\":\n        fileOp = {op,f};\n        break;\n    case \"ren\":\n        fileOp = {op,f,f2};\n        break;\n    case \"c\":\n        fileOp = {op,f,f2};\n        break;\n}\n\nmsg.payload = {\"cmd\":\"fileOp\",\"file\":fileOp}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 573.0173645019531,
+        "y": 968.0105781555176,
+        "wires": [
+            [
+                "97fcc3e1.0865f",
+                "1adc8ca4.4ecc43"
+            ]
+        ]
+    },
+    {
+        "id": "1adc8ca4.4ecc43",
+        "type": "link out",
+        "z": "f95c6e59.5c919",
+        "name": "fileConfig",
+        "links": [
+            "d1135c0.509fea8"
+        ],
+        "x": 745.0173873901367,
+        "y": 969.0106453895569,
+        "wires": []
+    },
+    {
+        "id": "fb445506.409ac8",
+        "type": "ui_form",
+        "z": "f95c6e59.5c919",
+        "name": "filePayload",
+        "label": "filePayload",
+        "group": "c47d7f0.070078",
+        "order": 6,
+        "width": "5",
+        "height": "11",
+        "options": [
+            {
+                "label": "L1",
+                "value": "text",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "topic": "file.pl",
+        "x": 355.0695266723633,
+        "y": 900.7745275497437,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "97fcc3e1.0865f",
+        "type": "debug",
+        "z": "f95c6e59.5c919",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 788.0833740234375,
+        "y": 879.1320300102234,
+        "wires": []
+    },
+    {
+        "id": "f4d096d8.635468",
+        "type": "function",
+        "z": "f95c6e59.5c919",
+        "name": "[OLD]Clear Pin data",
+        "func": "flow.set('pin',  null);\nflow.set('n',  null);\nflow.set('m', null);\nflow.set('pu',   null);\nflow.set('w',    null);\nflow.set('t',    null);\nflow.set('pwm',  null);\nflow.set('duty', null);\nflow.set('freq', null);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 942.017333984375,
+        "y": 341.2326354980469,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fad957c8.4947d8",
+        "type": "ui_template",
+        "z": "e0c6f6b6.0d5c68",
+        "group": "a14dfcff.d0a7e",
+        "name": "File Payload Receive",
+        "order": 1,
+        "width": "12",
+        "height": "4",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1767.0767517089844,
+        "y": 772.2989454269409,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f55d4fd.ad802c",
+        "type": "ui_text_input",
+        "z": "f95c6e59.5c919",
+        "name": "filenameNew",
+        "label": "filenameNew",
+        "group": "c47d7f0.070078",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "file.f2",
+        "x": 351.017391204834,
+        "y": 849.0104622840881,
+        "wires": [
+            [
+                "fef53a66.051ce8"
+            ]
+        ]
+    },
+    {
+        "id": "5793920d.4a685c",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D03",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[3]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[3]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1639.1285400390625,
+        "y": 1007.4548950195312,
+        "wires": [
+            [
+                "1b33a599.c820ba"
+            ]
+        ]
+    },
+    {
+        "id": "ee28be1a.43281",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D4i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[4]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[4]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640.1285400390625,
+        "y": 1037.454833984375,
+        "wires": [
+            [
+                "987405ef.c3c3b8"
+            ]
+        ]
+    },
+    {
+        "id": "c2d9be1f.c6c34",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D5i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[5]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[5]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1642.1285400390625,
+        "y": 1067.454833984375,
+        "wires": [
+            [
+                "5c83d490.3328bc"
+            ]
+        ]
+    },
+    {
+        "id": "e33aecce.1d764",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D6i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[6]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[6]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1641.1285400390625,
+        "y": 1097.454833984375,
+        "wires": [
+            [
+                "703bf0e3.2cf42"
+            ]
+        ]
+    },
+    {
+        "id": "c55f87e9.0f9af8",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D7i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[7]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[7]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640.1285400390625,
+        "y": 1127.454833984375,
+        "wires": [
+            [
+                "1800d512.2f0bfb"
+            ]
+        ]
+    },
+    {
+        "id": "827e961a.e53b58",
+        "type": "change",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "D8i",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pinLbl[8]",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "inEnbl[8]",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1642.1285400390625,
+        "y": 1157.454833984375,
+        "wires": [
+            [
+                "3008250d.ebd0da"
+            ]
+        ]
+    },
+    {
+        "id": "9f14a0e6.02039",
+        "type": "json",
+        "z": "cae895a0.8ab828",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2129.854263305664,
+        "y": 427.89237213134766,
+        "wires": [
+            [
+                "2add8cb0.0551b4"
+            ]
+        ]
+    },
+    {
+        "id": "2add8cb0.0551b4",
+        "type": "debug",
+        "z": "cae895a0.8ab828",
+        "name": "Review Node Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 2331.795166015625,
+        "y": 428.0104064941406,
+        "wires": []
+    },
+    {
+        "id": "33de556e.59ed5a",
+        "type": "ui_switch",
+        "z": "e0c6f6b6.0d5c68",
+        "name": "pwm (on/off)",
+        "label": "pwm (on/off)",
+        "group": "f78522d2.3c171",
+        "order": 11,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "pwm_start",
+        "style": "",
+        "onvalue": "{\"cmd\":\"pwm\",\"pin\":\"@\",\"start\":true}",
+        "onvalueType": "str",
+        "onicon": "fa-check-square",
+        "oncolor": " #48f442",
+        "offvalue": "{\"cmd\":\"pwm\",\"pin\":\"@\",\"start\":false}",
+        "offvalueType": "str",
+        "officon": "fa-square-o ",
+        "offcolor": "#f44256",
+        "x": 515.0142211914062,
+        "y": 1220.3692626953125,
+        "wires": [
+            [
+                "258ab0e3.f907"
             ]
         ]
     }
