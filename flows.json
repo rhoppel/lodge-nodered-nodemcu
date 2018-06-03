@@ -1131,7 +1131,7 @@
         "name": "Pin Config & Status",
         "order": 2,
         "width": "6",
-        "height": "6",
+        "height": "10",
         "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.id}}</span> </p>\n<ol start = 0>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"0\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"1\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"2\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"3\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"4\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"5\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"6\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"7\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"8\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"9\"]}}</span></li>\n<li><span style=\"color:LightBlue\">{{msg.payload.pins[\"10\"]}}</span></li>\n</ol>\n<h3>Pin States Legend</h3>\n<a style=\"color:LightBlue;\"  target=\"_blank\" href=\"https://nodemcu.readthedocs.io/en/master/en/modules/gpio/#gpiomode\">gpio docs</a>\n<h4>m (modes)</h4>\n<ol start = 0>\n<li>gpio.INPUT</li> \n<li>gpio.OUTPUT</li> \n<li>gpio.INT</li>\n<li>gpio.OPENDRAIN</li>  \n</ol>\n<h4>r (read state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>w (write state)</h4>\n<ol start = 0>\n<li>LOW</li>\n<li>HIGH</li>\n</ol>\n<h4>pu (pullup)</h4>\n<ol start = 0>\n<li>FLOAT  true</li>\n<li>PULLUP false</li>\n</ol>\n<p>pullup gpio.PULLUP enables the weak pull-up resistor; </p>\n<p>default is gpio.FLOAT</p>\n<h4>t  (trigger type)</h4>\n<ul>\n<li>\"up\"</li> \n<li>\"down\"</li> \n<li>\"both\"</li> \n<li>\"low\"</li> \n<li>\"high\"</li>\n</ul>\n<h4>pwm  (pulse width modulation)</h4>\n<ul>\n<li>ON: \"true\"</li> \n<li>OFF: \"false\"</li> \n</ul>\n<h4>freq (frequency for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>pwm frequency (0 - 1000 Hz)</li> \n</ul>\n<h4>duty (duty cycle for pwm pin)</h4>\n<ul>\n<li>INT</li>\n<li>duty cycle (0-1024)</li> \n</ul>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -5445,7 +5445,7 @@
         "type": "function",
         "z": "e0c6f6b6.0d5c68",
         "name": "cmd pwm \"pins_config\" ",
-        "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('pin.main_pin')     || \"4\";\nvar duty =    flow.get('pin.main_duty')    || 512;\nvar freq =    flow.get('pin.main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n}\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
+        "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('pin.main_pin')     || \"4\";\nvar duty =    flow.get('pin.main_duty')    || 512;\nvar freq =    flow.get('pin.main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n}\n\nif (msg.topic === \"pin.pwm\"){\n    pinConfig.freq = freq\n    pinConfig.duty = duty\n    pinConfig.pwm = msg.payload\n}\n\n\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
         "outputs": 2,
         "noerr": 0,
         "x": 785,
@@ -5473,8 +5473,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 1075,
-        "y": 1070,
+        "x": 1081,
+        "y": 1217,
         "wires": []
     },
     {
@@ -5788,8 +5788,8 @@
         "links": [
             "d1135c0.509fea8"
         ],
-        "x": 1185,
-        "y": 1160,
+        "x": 1183,
+        "y": 1165,
         "wires": []
     },
     {
@@ -5967,8 +5967,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 940,
-        "y": 1020,
+        "x": 939,
+        "y": 1028,
         "wires": [
             [
                 "1fe4c652.83ec9a"
@@ -5994,11 +5994,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1110,
-        "y": 1020,
+        "x": 1049,
+        "y": 1069,
         "wires": [
             [
-                "69b4786b.2e89a8"
+                "69b4786b.2e89a8",
+                "a7f02cb8.d627b"
             ]
         ]
     },
