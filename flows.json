@@ -77,7 +77,7 @@
         "id": "ae257199.19c84",
         "type": "ui_group",
         "z": "",
-        "name": "Pin Status",
+        "name": "Pin Inputs",
         "tab": "5b605797.172848",
         "order": 4,
         "disp": true,
@@ -402,7 +402,7 @@
         "id": "f78522d2.3c171",
         "type": "ui_group",
         "z": "",
-        "name": "Pin Control",
+        "name": "Pin Outputs",
         "tab": "5b605797.172848",
         "order": 3,
         "disp": true,
@@ -1171,7 +1171,7 @@
         "order": 2,
         "width": "6",
         "height": "10",
-        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.payload[0]}}</span> </p>\n<p>D (Device) Object</p>\n<ol>\n<li>adc:     <span style=\"color:LightBlue\"> {{msg.payload[1].adc}}</span></li>\n<li>ap_mac:  <span style=\"color:LightBlue\"> {{msg.payload[1].ap_mac}}</span> </li>\n<li>bootreason_extnd: <span style=\"color:LightBlue\"> {{msg.payload[1].bootreason_extnd}}</span> </li>\n<li>chipid:  <span style=\"color:LightBlue\"> {{msg.payload[1].chipid}}</span></li>\n<li>dbg:     <span style=\"color:LightBlue\"> {{msg.payload[1].dbg}}</span></li>    \n<li>flashid: <span style=\"color:LightBlue\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize:<span style=\"colorLightBlue\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:LightBlue\"> {{msg.payload[1].heap}}</span></li>\n<li>heap_min:<span style=\"color:LightBlue\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>ID: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ID}}</span></li>\n<li>ip: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ip}}</span></li>\n<li>LED: \t <span style=\"color:LightBlue\"> {{msg.payload[1].LED}}</span></li>\n<li>pins: \t <span style=\"color:LightBlue\"> {{msg.payload[1].pins}}</span></li>\n<li>mqtt:    <span style=\"color:LightBlue\"> {{msg.payload[1].mqtt}}</span></li>\n<li>msg: \t <span style=\"color:LightBlue\"> {{msg.payload[1].msg}}</span></li>\n<li>name: \t <span style=\"color:LightBlue\"> {{msg.payload[1].name}}</span></li>\n<li>screen:  <span style=\"color:LightBlue\"> {{msg.payload[1].screen}}</span></li>\n<li>sta_mac: <span style=\"color:LightBlue\"> {{msg.payload[1].sta_mac}}</span></li>\n<li>t_cal:\t <span style=\"color:LightBlue\"> {{msg.payload[1].t_cal}}</span></li>\n<li>tmpr:    <span style=\"color:LightBlue\"> {{msg.payload[1].tmpr}}</span></li>\n<li>type: \t <span style=\"color:LightBlue\"> {{msg.payload[1].type}}</span></li>\n</ol>\n",
+        "format": "<p>[ID]<span style=\"color:LightBlue\"> {{msg.payload[0]}}</span> </p>\n<p>D (Device) Object</p>\n<ol>\n<li>adc:     <span style=\"color:LightBlue\"> {{msg.payload[1].adc}}</span></li>\n<li>ap_mac:  <span style=\"color:LightBlue\"> {{msg.payload[1].ap_mac}}</span> </li>\n<li>bootreason_extnd: <span style=\"color:LightBlue\"> {{msg.payload[1].bootreason_extnd}}</span> </li>\n<li>chipid:  <span style=\"color:LightBlue\"> {{msg.payload[1].chipid}}</span></li>\n<li>dbg:     <span style=\"color:LightBlue\"> {{msg.payload[1].dbg}}</span></li>    \n<li>flashid: <span style=\"color:LightBlue\"> {{msg.payload[1].flashid}}  </span></li>\n<li>flashsize:<span style=\"colorLightBlue\"> {{msg.payload[1].flashsize}} </span> </li>\n<li>heap:    <span style=\"color:LightBlue\"> {{msg.payload[1].heap}}</span></li>\n<li>heap_min:<span style=\"color:LightBlue\"> {{msg.payload[1].heap_min}} </span> </li>\n<li>ID: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ID}}</span></li>\n<li>ip: \t <span style=\"color:LightBlue\"> {{msg.payload[1].ip}}</span></li>\n<li>LED: \t <span style=\"color:LightBlue\"> {{msg.payload[1].LED}}</span></li>\n<li>pins: \t <span style=\"color:LightBlue\"> {{msg.payload[1].pins}}</span></li>\n<li>mqtt:    <span style=\"color:LightBlue\"> {{msg.payload[1].mqtt}}</span></li>\n<li>name: \t <span style=\"color:LightBlue\"> {{msg.payload[1].name}}</span></li>\n<li>screen:  <span style=\"color:LightBlue\"> {{msg.payload[1].screen}}</span></li>\n<li>sta_mac: <span style=\"color:LightBlue\"> {{msg.payload[1].sta_mac}}</span></li>\n<li>t_cal:\t <span style=\"color:LightBlue\"> {{msg.payload[1].t_cal}}</span></li>\n<li>tmpr:    <span style=\"color:LightBlue\"> {{msg.payload[1].tmpr}}</span></li>\n<li>type: \t <span style=\"color:LightBlue\"> {{msg.payload[1].type}}</span></li>\n</ol>\n",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "templateScope": "local",
@@ -1185,20 +1185,20 @@
         "id": "640e1376.5a81fc",
         "type": "ui_button",
         "z": "e0c6f6b6.0d5c68",
-        "name": "pins CMD",
+        "name": "pins status",
         "group": "6bf64492.b29f0c",
         "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "pins CMD",
+        "label": "pins status",
         "color": "",
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"pins\"}",
         "payloadType": "json",
         "topic": "",
-        "x": 782,
+        "x": 792,
         "y": 742,
         "wires": [
             [
@@ -1334,20 +1334,20 @@
         "id": "9b09422c.ce3f1",
         "type": "ui_button",
         "z": "e0c6f6b6.0d5c68",
-        "name": "Device Status",
+        "name": "Node Status",
         "group": "6bf64492.b29f0c",
         "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Device Status",
+        "label": "Node Status",
         "color": "",
         "bgcolor": "",
         "icon": "",
         "payload": "{\"cmd\":\"device\"}",
         "payloadType": "json",
         "topic": "",
-        "x": 765,
+        "x": 755,
         "y": 860,
         "wires": [
             [
@@ -2197,7 +2197,7 @@
                 "label": "Header",
                 "value": "1",
                 "type": "text",
-                "required": false
+                "required": true
             },
             {
                 "label": "L1",
@@ -3250,8 +3250,8 @@
         "offvalueType": "bool",
         "officon": "fa-square-o ",
         "offcolor": "#f44256",
-        "x": 515,
-        "y": 1070,
+        "x": 384,
+        "y": 1060.0001068115234,
         "wires": [
             [
                 "82400b00.6543c8"
@@ -3273,8 +3273,8 @@
         "min": "0",
         "max": "1023",
         "step": "1",
-        "x": 525,
-        "y": 1120,
+        "x": 394,
+        "y": 1110.0001068115234,
         "wires": [
             [
                 "963c9408.df1e48",
@@ -3297,8 +3297,8 @@
         "min": "0",
         "max": "1000",
         "step": "1",
-        "x": 525,
-        "y": 1170,
+        "x": 394,
+        "y": 1160.0001068115234,
         "wires": [
             [
                 "8061b4fd.4aa5c8",
@@ -4173,8 +4173,8 @@
         "label": "frequency",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 765,
-        "y": 1170,
+        "x": 634,
+        "y": 1160.0001068115234,
         "wires": []
     },
     {
@@ -4189,8 +4189,8 @@
         "label": "duty cycle",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 765,
-        "y": 1120,
+        "x": 634,
+        "y": 1110.0001068115234,
         "wires": []
     },
     {
@@ -5448,8 +5448,8 @@
         "func": "var pinConfig = {};\nvar pinObject = {};\n\nvar pin =     flow.get('pin.main_pin')     || \"4\";\nvar duty =    flow.get('pin.main_duty')    || 512;\nvar freq =    flow.get('pin.main_freq')    || 4;\nvar pwm_msg = null;\n\nvar label = \"D\" + pin + \".label\";\n\nnode.status({text: \"pin[\" + pin + \"]  | \" + msg.topic + \" | \" + msg.payload});\n\nif (msg.topic === \"pwm_n\"){\n    pinConfig.n = msg.payload;\n}\n\nif (msg.topic === \"pin.pwm\"){\n    pinConfig.freq = freq\n    pinConfig.duty = duty\n    pinConfig.pwm = msg.payload\n}\n\n\n    pinObject[pin] = pinConfig;\n    msg.payload = {\"cmd\":\"pins_config\",\"pins\":pinObject};\n\nreturn [msg, pwm_msg];",
         "outputs": 2,
         "noerr": 0,
-        "x": 785,
-        "y": 1070,
+        "x": 654,
+        "y": 1060.0001068115234,
         "wires": [
             [
                 "a7f02cb8.d627b",
@@ -5473,8 +5473,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 1081,
-        "y": 1217,
+        "x": 1162.0000267028809,
+        "y": 1215.0001411437988,
         "wires": []
     },
     {
@@ -5543,8 +5543,8 @@
         ],
         "payload": "",
         "topic": "pin.main_pin",
-        "x": 525,
-        "y": 1020,
+        "x": 394,
+        "y": 1010.0001068115234,
         "wires": [
             [
                 "72fb8bf2.eae094"
@@ -5568,8 +5568,8 @@
         "payload": "{\"cmd\":\"pwm\",\"pin\":@}",
         "payloadType": "str",
         "topic": "",
-        "x": 251.9999771118164,
-        "y": 975.9999847412109,
+        "x": 120.9999771118164,
+        "y": 966.0000915527344,
         "wires": [
             []
         ]
@@ -5593,8 +5593,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 1020,
+        "x": 249,
+        "y": 1010.0001068115234,
         "wires": [
             [
                 "52e52c77.dcab24",
@@ -5614,8 +5614,8 @@
         "crontab": "",
         "once": true,
         "onceDelay": "0.3",
-        "x": 235,
-        "y": 1020,
+        "x": 104,
+        "y": 1010.0001068115234,
         "wires": [
             [
                 "ab0e57c5.e7d9c8"
@@ -5643,8 +5643,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 1220,
+        "x": 639,
+        "y": 1210.0001068115234,
         "wires": [
             [
                 "a7f02cb8.d627b",
@@ -5788,8 +5788,8 @@
         "links": [
             "d1135c0.509fea8"
         ],
-        "x": 1183,
-        "y": 1165,
+        "x": 1182.0000429153442,
+        "y": 1057.000156402588,
         "wires": []
     },
     {
@@ -5806,8 +5806,8 @@
         "mode": "text",
         "delay": "1000",
         "topic": "pwm_n",
-        "x": 520.9999923706055,
-        "y": 971.9999828338623,
+        "x": 389.99999237060547,
+        "y": 962.0000896453857,
         "wires": [
             [
                 "82400b00.6543c8"
@@ -5822,8 +5822,8 @@
         "func": "flow.set(msg.topic,msg.payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 745,
-        "y": 1020.0000038146973,
+        "x": 614,
+        "y": 1010.0001106262207,
         "wires": [
             []
         ]
@@ -5967,8 +5967,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 939,
-        "y": 1028,
+        "x": 803.0000267028809,
+        "y": 1005.0001111030579,
         "wires": [
             [
                 "1fe4c652.83ec9a"
@@ -5994,8 +5994,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1049,
-        "y": 1069,
+        "x": 982.0000457763672,
+        "y": 1005.0001721382141,
         "wires": [
             [
                 "69b4786b.2e89a8",
@@ -6086,8 +6086,8 @@
             "8c760a40.3a9218",
             "34bbd91.717ea26"
         ],
-        "x": 349.99999618530273,
-        "y": 1071.999924659729,
+        "x": 218.99999618530273,
+        "y": 1062.0000314712524,
         "wires": []
     },
     {
@@ -6470,33 +6470,33 @@
         "passthru": true,
         "options": [
             {
-                "label": "",
+                "label": "node device",
                 "value": "D",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "node pins",
                 "value": "PINS",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "MQTT configuration",
                 "value": "MQTT",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "Access Point configuration",
                 "value": "AP",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "node timers",
                 "value": "TMR",
                 "type": "str"
             },
             {
-                "label": "",
-                "value": "",
+                "label": "node message",
+                "value": "M",
                 "type": "str"
             }
         ],
@@ -6979,8 +6979,8 @@
         "offvalueType": "str",
         "officon": "fa-square-o ",
         "offcolor": "#f44256",
-        "x": 515.0142211914062,
-        "y": 1220.3692626953125,
+        "x": 384.01422119140625,
+        "y": 1210.369369506836,
         "wires": [
             [
                 "258ab0e3.f907"
