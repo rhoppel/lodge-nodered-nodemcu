@@ -2,7 +2,11 @@
     "name": "NodeMCU-control",
     "description": "integrate NodeMCU wit Node-Red",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-os": "0.1.7",
+        "node-red-dashboard": "2.9.6",
+        "node-red-node-random": "0.1.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
