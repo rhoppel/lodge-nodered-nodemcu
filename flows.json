@@ -333,12 +333,6 @@
         "collapse": false
     },
     {
-        "id": "52975e20.0f289",
-        "type": "sqlitedb",
-        "z": "",
-        "db": "/home/pi/dbs/iot.db"
-    },
-    {
         "id": "a4bd0da.b2f13f",
         "type": "mqtt-broker",
         "z": "",
@@ -445,11 +439,17 @@
     {
         "id": "4ab95fd9.f813f",
         "type": "mongodb",
-        "z": "",
+        "z": 0,
         "hostname": "192.168.111.250",
         "port": "27017",
         "db": "ricksTest",
         "name": ""
+    },
+    {
+        "id": "52975e20.0f289",
+        "type": "sqlitedb",
+        "z": 0,
+        "db": "/home/pi/dbs/iot.db"
     },
     {
         "id": "110362ba.b083ad",
@@ -3492,20 +3492,6 @@
         "x": 1330,
         "y": 530,
         "wires": []
-    },
-    {
-        "id": "68c2e294.59acbc",
-        "type": "sqlite",
-        "z": "b2d96b1.0f3be98",
-        "mydb": "52975e20.0f289",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "TARDIS",
-        "x": 810,
-        "y": 220,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "d060982b.8cfe98",
@@ -7120,12 +7106,12 @@
         "type": "file",
         "z": "cae895a0.8ab828",
         "name": "",
-        "filename": "/home/pi/tardis/nodesDB",
+        "filename": "tardis/nodesDB",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "false",
-        "x": 1590,
-        "y": 520,
+        "x": 1442.0000839233398,
+        "y": 640.0000152587891,
         "wires": [
             []
         ]
@@ -7141,8 +7127,32 @@
         "upsert": false,
         "multi": false,
         "operation": "update",
-        "x": 1427.89453125,
-        "y": 683.578125,
+        "x": 1512.8949432373047,
+        "y": 683.578145980835,
         "wires": []
+    },
+    {
+        "id": "7916feb3.7e5ed",
+        "type": "comment",
+        "z": "cae895a0.8ab828",
+        "name": "for review only at the moment",
+        "info": "",
+        "x": 1506.5000915527344,
+        "y": 593.3333740234375,
+        "wires": []
+    },
+    {
+        "id": "68c2e294.59acbc",
+        "type": "sqlite",
+        "z": "b2d96b1.0f3be98",
+        "mydb": "52975e20.0f289",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "TARDIS",
+        "x": 810,
+        "y": 220,
+        "wires": [
+            []
+        ]
     }
 ]
