@@ -2288,6 +2288,8 @@
             "name": ""
         },
         "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
         "topic": "",
         "x": 641,
         "y": 289,
@@ -6656,6 +6658,8 @@
             "text": ""
         },
         "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
         "topic": "file.pl",
         "x": 360,
         "y": 855,
