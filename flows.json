@@ -43,7 +43,7 @@
         "id": "b2d96b1.0f3be98",
         "type": "tab",
         "label": "Recording",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
@@ -335,8 +335,9 @@
     {
         "id": "52975e20.0f289",
         "type": "sqlitedb",
-        "z": 0,
-        "db": "/home/pi/dbs/iot.db"
+        "z": "",
+        "db": "/home/pi/dbs/iot.db",
+        "mode": "RWC"
     },
     {
         "id": "a4bd0da.b2f13f",
@@ -424,7 +425,7 @@
         "id": "c47d7f0.070078",
         "type": "ui_group",
         "z": "",
-        "name": "fileOp",
+        "name": "fileOperations",
         "tab": "f095d7f0.6182d8",
         "order": 2,
         "disp": true,
@@ -450,6 +451,17 @@
         "port": "27017",
         "db": "ricksTest",
         "name": ""
+    },
+    {
+        "id": "9f679884.557398",
+        "type": "ui_group",
+        "z": "",
+        "name": "UI Table",
+        "tab": "8f789c15.e1ead",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "110362ba.b083ad",
@@ -569,8 +581,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1475,
-        "y": 270,
+        "x": 1458.0000267028809,
+        "y": 239.99999904632568,
         "wires": []
     },
     {
@@ -2288,8 +2300,8 @@
             "name": ""
         },
         "payload": "",
-        "submit": "Submit",
-        "cancel": "Cancel",
+        "submit": "submit",
+        "cancel": "cancel",
         "topic": "",
         "x": 641,
         "y": 289,
@@ -3425,8 +3437,8 @@
             "d060982b.8cfe98",
             "2e2c0253.a3741e"
         ],
-        "x": 1480,
-        "y": 350,
+        "x": 1639.0001773834229,
+        "y": 312.00004482269287,
         "wires": []
     },
     {
@@ -3496,20 +3508,6 @@
         "wires": []
     },
     {
-        "id": "68c2e294.59acbc",
-        "type": "sqlite",
-        "z": "b2d96b1.0f3be98",
-        "mydb": "52975e20.0f289",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "TARDIS",
-        "x": 810,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d060982b.8cfe98",
         "type": "link in",
         "z": "b2d96b1.0f3be98",
@@ -3549,11 +3547,11 @@
         "func": "\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 560,
-        "y": 200,
+        "x": 572.0000305175781,
+        "y": 200.00000190734863,
         "wires": [
             [
-                "68c2e294.59acbc"
+                "3df0e9aa.2da106"
             ]
         ]
     },
@@ -3569,7 +3567,7 @@
         "y": 280,
         "wires": [
             [
-                "68c2e294.59acbc"
+                "3df0e9aa.2da106"
             ]
         ]
     },
@@ -5371,8 +5369,8 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
-        "x": 1785,
-        "y": 730,
+        "x": 1908.0000534057617,
+        "y": 749.0000286102295,
         "wires": [
             [],
             []
@@ -5401,8 +5399,8 @@
         "y": 730,
         "wires": [
             [
-                "e82f4655.692d98",
-                "a17d4562.4d50d8"
+                "a17d4562.4d50d8",
+                "f624b4fe.16e6d8"
             ]
         ]
     },
@@ -5907,8 +5905,8 @@
         "links": [
             "22bdcf95.22c49"
         ],
-        "x": 1565,
-        "y": 420,
+        "x": 1550.0000553131104,
+        "y": 503.99999809265137,
         "wires": []
     },
     {
@@ -6134,8 +6132,7 @@
         "wires": [
             [
                 "3d09f36d.0d89cc",
-                "7c2d0af7.c2fdb4",
-                "f0368866.f3d248"
+                "7c2d0af7.c2fdb4"
             ]
         ]
     },
@@ -6658,8 +6655,8 @@
             "text": ""
         },
         "payload": "",
-        "submit": "Submit",
-        "cancel": "Cancel",
+        "submit": "submit",
+        "cancel": "cancel",
         "topic": "file.pl",
         "x": 360,
         "y": 855,
@@ -7128,26 +7125,11 @@
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "false",
-        "x": 1442.0000839233398,
-        "y": 640.0000152587891,
+        "x": 1500.0001754760742,
+        "y": 623.0000286102295,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "f0368866.f3d248",
-        "type": "mongodb out",
-        "z": "cae895a0.8ab828",
-        "mongodb": "4ab95fd9.f813f",
-        "name": "",
-        "collection": "test",
-        "payonly": false,
-        "upsert": false,
-        "multi": false,
-        "operation": "update",
-        "x": 1512.8949432373047,
-        "y": 683.578145980835,
-        "wires": []
     },
     {
         "id": "7916feb3.7e5ed",
@@ -7155,8 +7137,224 @@
         "z": "cae895a0.8ab828",
         "name": "for review only at the moment",
         "info": "",
-        "x": 1506.5000915527344,
-        "y": 593.3333740234375,
+        "x": 1539.500144958496,
+        "y": 587.333402633667,
         "wires": []
+    },
+    {
+        "id": "61ea2632.3a2b88",
+        "type": "debug",
+        "z": "b2d96b1.0f3be98",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1098.789150238037,
+        "y": 238.46095085144043,
+        "wires": []
+    },
+    {
+        "id": "f5875761.be8ab8",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 379.77342987060547,
+        "y": 117.8046875,
+        "wires": [
+            [
+                "48a032a.7d5f4cc"
+            ]
+        ]
+    },
+    {
+        "id": "e8bb70b1.d14d7",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 357.7734375,
+        "y": 377.8046875,
+        "wires": [
+            [
+                "82f7f061.c6514"
+            ]
+        ]
+    },
+    {
+        "id": "ac4f5a79.275368",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "createTable",
+        "topic": "CREATE TABLE RANDOMNUM( TIMESTAMP INT PRIMARY KEY NOT NULL, VALUE INT NOT NULL, BOOL INT NOT NULL)",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 630.7734298706055,
+        "y": 546.8125281333923,
+        "wires": [
+            [
+                "3df0e9aa.2da106"
+            ]
+        ]
+    },
+    {
+        "id": "3df0e9aa.2da106",
+        "type": "sqlite",
+        "z": "b2d96b1.0f3be98",
+        "mydb": "52975e20.0f289",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "MySQLLite",
+        "x": 845.5390548706055,
+        "y": 227.88281059265137,
+        "wires": [
+            [
+                "61ea2632.3a2b88",
+                "19182864.80ecc8"
+            ]
+        ]
+    },
+    {
+        "id": "9e94b27d.896af",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "createData",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 443.78122329711914,
+        "y": 615.8125281333923,
+        "wires": [
+            [
+                "6a97e129.3d932"
+            ]
+        ]
+    },
+    {
+        "id": "6a97e129.3d932",
+        "type": "function",
+        "z": "b2d96b1.0f3be98",
+        "name": "write Query",
+        "func": "var randomNum = Math.round(Math.random()*100);\nvar largeBool = (randomNum > 50)?1:0;\nvar newMsg = {\n \"topic\": \"INSERT INTO RANDOMNUM VALUES ( \" + msg.payload + \", \" + randomNum + \", \" + largeBool + \")\"\n}\n\nreturn newMsg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 633.7890548706055,
+        "y": 614.2500286102295,
+        "wires": [
+            [
+                "3df0e9aa.2da106"
+            ]
+        ]
+    },
+    {
+        "id": "19182864.80ecc8",
+        "type": "ui_template",
+        "z": "b2d96b1.0f3be98",
+        "group": "9f679884.557398",
+        "name": "UI table",
+        "order": 0,
+        "width": "6",
+        "height": "9",
+        "format": "<table style=\"width:100%\">\n  <tr>\n    <th>Index</th> \n    <th>Timestamp</th>\n    <th>Value</th> \n    <th>Bool</th>\n  </tr>\n  <tr ng-repeat=\"x in msg.payload | limitTo:20\">\n    <td>{{$index}}</td>\n    <td>{{msg.payload[$index].TIMESTAMP}}</td>\n    <td>{{msg.payload[$index].VALUE}}</td> \n    <td>{{msg.payload[$index].BOOL}}</td>\n  </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1107.7734336853027,
+        "y": 303.6953411102295,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5e28fff.7bf6e",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "viewRecords",
+        "topic": "SELECT * FROM RANDOMNUM ORDER BY TIMESTAMP DESC LIMIT 100;",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 625.7734298706055,
+        "y": 487.81250524520874,
+        "wires": [
+            [
+                "3df0e9aa.2da106"
+            ]
+        ]
+    },
+    {
+        "id": "f67bc551.710c58",
+        "type": "inject",
+        "z": "b2d96b1.0f3be98",
+        "name": "cleanDB",
+        "topic": "DELETE FROM RANDOMNUM WHERE TIMESTAMP <= strftime('%s','now', '-1 hours')*1000",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 621.7734375,
+        "y": 687.8125,
+        "wires": [
+            [
+                "3df0e9aa.2da106"
+            ]
+        ]
+    },
+    {
+        "id": "17feaefb.0e7f11",
+        "type": "comment",
+        "z": "b2d96b1.0f3be98",
+        "name": "test DB",
+        "info": "",
+        "x": 617.7734375,
+        "y": 437.9921875,
+        "wires": []
+    },
+    {
+        "id": "f624b4fe.16e6d8",
+        "type": "range",
+        "z": "e0c6f6b6.0d5c68",
+        "minin": "0",
+        "maxin": "1024",
+        "minout": "0",
+        "maxout": "1024",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 1704.53125,
+        "y": 712.9140625,
+        "wires": [
+            [
+                "e82f4655.692d98"
+            ]
+        ]
     }
 ]
