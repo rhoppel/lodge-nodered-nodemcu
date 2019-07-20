@@ -1421,6 +1421,7 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
+        "outputs": 2,
         "x": 1785,
         "y": 510,
         "wires": [
@@ -1463,6 +1464,7 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
+        "outputs": 2,
         "x": 1795,
         "y": 560,
         "wires": [
@@ -1995,6 +1997,7 @@
         "ymax": "",
         "removeOlder": 1,
         "removeOlderUnit": "86400",
+        "outputs": 2,
         "x": 760,
         "y": 580,
         "wires": [
@@ -2053,6 +2056,7 @@
             "#c5b0d5"
         ],
         "useOldStyle": true,
+        "outputs": 2,
         "x": 750,
         "y": 640,
         "wires": [
@@ -2479,7 +2483,7 @@
             "1adc8ca4.4ecc43"
         ],
         "x": 910,
-        "y": 120,
+        "y": 108,
         "wires": [
             [
                 "b9b3f548.4fa638"
@@ -5369,6 +5373,7 @@
             "#c5b0d5"
         ],
         "useOldStyle": false,
+        "outputs": 2,
         "x": 1908.0000534057617,
         "y": 749.0000286102295,
         "wires": [
