@@ -8,3 +8,6 @@ integrate NodeMCU modules with home control
 ### TO DO:
 - [ ] add system reboot button using "exec" node
 - [ ] update libraries
+
+### Recent changes
+- refreshed libraries 
