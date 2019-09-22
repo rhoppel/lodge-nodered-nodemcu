@@ -11,7 +11,7 @@ integrate NodeMCU modules with home control
 - [ ] split PWM configuration into a separate module
   - MAIN menu
   - make it wider to make frequency and pwn slider more control
-- [ ] consider making MAIN module "shorter" to allow module to better fit screen
+- [ ] consider making MAIN module "shorter" to allow module to better fit scree
 
 ### Recent changes
 - refreshed libraries 
