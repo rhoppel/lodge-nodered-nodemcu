@@ -237,6 +237,12 @@
                 "base-font": {
                     "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
                 }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
             }
         },
         "site": {
@@ -417,7 +423,7 @@
         "type": "ui_group",
         "z": "",
         "name": "active NodeId",
-        "tab": "5b605797.172848",
+        "tab": "6ccd2dc7.996d04",
         "order": 1,
         "disp": true,
         "width": "3",
@@ -7362,6 +7368,51 @@
         "wires": [
             [
                 "e82f4655.692d98"
+            ]
+        ]
+    },
+    {
+        "id": "d25167cb.8c6828",
+        "type": "exec",
+        "z": "4d987d79.a89374",
+        "command": "sudo shutdown -r now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown",
+        "x": 241.01988983154297,
+        "y": 57.678955078125,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f7dbd608.880868",
+        "type": "ui_button",
+        "z": "4d987d79.a89374",
+        "name": "REBOOT",
+        "group": "689116a6.ccd8d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "REBOOT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 97.00851821899414,
+        "y": 58.06817054748535,
+        "wires": [
+            [
+                "d25167cb.8c6828"
             ]
         ]
     }
