@@ -15,3 +15,10 @@ integrate NodeMCU modules with home control
 
 ### Recent changes
 - refreshed libraries 
+
+### PROBLEMS
+- git credentials don't work so a push does not work
+  - CAUSE: git password was entered incorrectly
+  - [git credential problems](https://discourse.nodered.org/t/unable-to-retry-username-password-for-remote-git-repository/14842)
+  - restart node-red 
+      - credentials are reset after reboot
