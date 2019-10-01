@@ -24,7 +24,7 @@
         "id": "58ae81fe.fc8ae",
         "type": "tab",
         "label": "Test",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -36,14 +36,14 @@
         "id": "32688592.0a19aa",
         "type": "tab",
         "label": "New Stuff",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "b2d96b1.0f3be98",
         "type": "tab",
         "label": "Recording",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
